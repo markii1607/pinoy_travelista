@@ -15,7 +15,7 @@ class PriceListController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		
 	}
 
 
@@ -86,6 +86,11 @@ class PriceListController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function admin_index() {
+		$lists = $this->model->with('tour_package')->get();
+		return View::make('admin.priceList')->withLists($lists);
 	}
 
 

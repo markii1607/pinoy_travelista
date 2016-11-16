@@ -132,7 +132,7 @@ function myFunction() {
       <div class="container">
           <ul class="topnav" id="myTopnav">
           <div class="logo">
-            <a href="/"><img src="images/logo2.png" id="section-1" class="img-responsive" alt=""/></a>
+            <a href="/">{{ HTML::image('images/logo2.png', '', array('id' => 'section-1', 'class' => 'img-responsive')) }}</a>
             </div>
             <div class="menu">
 		   <li><a href="testimonials"><i class="fa fa-commenting"> Testimonials</a></li></i>
