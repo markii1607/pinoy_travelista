@@ -44,11 +44,9 @@ html, body{
     font-weight: 600;	
 }
 .banner{
-<<<<<<< HEAD
-    background: url(../images/tinagoFalls.jpg) no-repeat 0px 0px;
-=======
     background: url(../images/1.jpg) no-repeat 0px 0px;
->>>>>>> 54ffdc2d07a2cedbbca16ff4ca06d503e6bee74f
+
+    background: url(../images/banner.jpg) no-repeat 0px 0px;
     background-size: cover;
 }
 .banner-grids{
@@ -2517,9 +2515,48 @@ body {
   color : black;
   background-color: #fff;
   padding : 5px 15px;
+  border: 2px solid #ddd;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 35b0e023747c23664653eb9035de1bc89435b0b1
 /*-- about --*/
 .header-bg {
   min-height: 400px !important;
@@ -2529,7 +2566,7 @@ body {
 }
 .about-grids {
   padding: 3em 0 1em 0;
-  background: url(../images/bg_1.jpg) no-repeat 0px 0px;
+  background-color: #fff;
   background-size: cover;
 }
 .green{
@@ -2926,6 +2963,7 @@ height:1px;
 display: inline-block;
 }
 /*--/client-say--*/
+<<<<<<< HEAD
 =======
 
 
@@ -2970,3 +3008,6 @@ display: inline-block;
 
 
 >>>>>>> 54ffdc2d07a2cedbbca16ff4ca06d503e6bee74f
+=======
+>>>>>>> c654749c9d0f1812a9fd1ad184c3de95ccad48ab
+>>>>>>> 35b0e023747c23664653eb9035de1bc89435b0b1

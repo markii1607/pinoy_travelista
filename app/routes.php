@@ -14,7 +14,6 @@
 // route for home page
 Route::get('/', 'TourPackageController@getPackages');
 
-<<<<<<< HEAD
 // Resourceful Routing for login
 Route::get('login', 'LoginController@index');
 Route::post('login', 'LoginController@store');
@@ -39,30 +38,29 @@ Route::get('admin', ['before' => 'auth.basic', function(){
 }]);
 
 
-=======
->>>>>>> 54ffdc2d07a2cedbbca16ff4ca06d503e6bee74f
 // resourceful routes
 Route::resource('contacts', 'ContactController');
 Route::resource('feedback', 'FeedbackController');
 Route::resource('tours', 'TourPackageController');
+Route::resource('itinerary', 'ItineraryController');
+Route::resource('prices', 'PriceListController');
+Route::resource('sites', 'SiteController');
+Route::resource('reviews', 'TourReviewController');
 
 Route::get('about', function(){
   return View::make('tourism.about');
 });
 
-Route::get('contact', function() {
-  return View::make('tourism.contact');
+Route::get('testimonials', function() {
+  return View::make('tourism.testimonials');
 });
+
+Route::get('top', 'TourPackageController@getTours');
 
 // Route::get('details/{id}', 'TourPackageController@show');
 Route::get('details', 'TourPackageController@details');
 
 // admin Routes
-Route::get('tourism', function() {
-  return View::make('admin.tourism');
-
-});
-
 Route::get('admin/pages/', function() {
   return Redirect::to('admin/pages/view_feeds');
 });
