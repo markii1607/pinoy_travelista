@@ -26,7 +26,7 @@ class ContactController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+
 	}
 
 

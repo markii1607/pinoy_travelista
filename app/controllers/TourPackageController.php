@@ -49,7 +49,7 @@ class TourPackageController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+
 	}
 
 
@@ -88,5 +88,18 @@ class TourPackageController extends \BaseController {
 		//
 	}
 
+	public function getPackages() {
+		$packages = $this->model->select(['id', 'name', 'location', 'description', 'filename'])->get();
+		return View::make('tourism.index')->withPackages($packages);
+	}
+
+	public function details() {
+		$id = Input::get('id');
+		$package = $this->model->with(['tour_reviews', 'itineraries', 'sites', 'price_lists'])->find($id);
+
+		$others = $this->model->where('id', '!=', $id)->get();
+
+		return View::make('tourism.details')->withPackage($package)->withOthers($others);
+	}
 
 }

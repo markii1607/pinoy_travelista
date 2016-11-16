@@ -23,6 +23,13 @@ class TourReviewTableSeeder extends Seeder {
         'name' => 'Christine Kaye Lucido',
         'email' => 'ck@example.com',
         'review' => 'Such an amazing tour. Maybe you should probably try this one too. I would recommend it to my friends to visit Palawan'
+      ],
+      [
+        'id' => 4,
+        'tour_package_id' => 4,
+        'name' => 'Allen Chester Bio',
+        'email' => 'bio@example.com',
+        'review' => 'It is my first time to visit Boracay. It is very peaceful and calm. I love it.'
       ]
     ];
 

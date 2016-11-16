@@ -62,6 +62,11 @@ class SiteTableSeeder extends Seeder {
         'id' => 12,
         'tour_package_id' => 3,
         'name' => 'Rock Formation'
+      ],
+      [
+        'id' => 13,
+        'tour_package_id' => 4,
+        'name' => 'Boracay Beach Resort'
       ]
     ];
 

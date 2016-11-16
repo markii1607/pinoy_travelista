@@ -9,7 +9,7 @@ class TourPackage extends Eloquent {
    */
   protected $table = 'tour_packages';
 
-  protected $fillable = ['name', 'location', 'description', 'travel_time', 'package_inclusion', 'package_exclusion', 'avail', 'no_of_days'];
+  protected $fillable = ['name', 'filename', 'location', 'description', 'travel_time', 'package_inclusion', 'package_exclusion', 'avail', 'no_of_days'];
 
   public $rules = ['name' => 'required', 'location' => 'required', 'description' => 'required', 'travel_time' => 'required', 'package_inclusion' => 'required', 'package_exclusion' => 'required', 'avail' => 'required', 'no_of_days' => 'required'];
 

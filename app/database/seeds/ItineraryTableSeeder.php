@@ -184,6 +184,34 @@ class ItineraryTableSeeder extends Seeder {
         'day' => 1,
         'time' => '19:00:00',
         'event' => 'Departure to Manila'
+      ],
+      [
+        'id' => 27,
+        'tour_package_id' => 4,
+        'day' => 1,
+        'time' => '08:15:00',
+        'event' => 'Arrival from Manila'
+      ],
+      [
+        'id' => 28,
+        'tour_package_id' => 4,
+        'day' => 1,
+        'time' => '08:30:00',
+        'event' => 'Boracay Beach Resort'
+      ],
+      [
+        'id' => 29,
+        'tour_package_id' => 4,
+        'day' => 1,
+        'time' => '12:00:00',
+        'event' => 'Lunch Break'
+      ],
+      [
+        'id' => 30,
+        'tour_package_id' => 4,
+        'day' => 1,
+        'time' => '19:00:00',
+        'event' => 'Departure to Manila'
       ]
     ];
 

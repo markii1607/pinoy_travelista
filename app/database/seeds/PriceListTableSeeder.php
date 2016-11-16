@@ -32,6 +32,16 @@ class PriceListTableSeeder extends Seeder {
         'id' => 6,
         'tour_package_id' => 3,
         'name' => 'P16,500 per 8-15 pax'
+      ],
+      [
+        'id' => 7,
+        'tour_package_id' => 4,
+        'name' => 'P8,000.00 per 3-7 pax'
+      ],
+      [
+        'id' => 8,
+        'tour_package_id' => 4,
+        'name' => 'P16,500 per 8-15 pax'
       ]
     ];
 
