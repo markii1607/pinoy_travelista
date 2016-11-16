@@ -27,11 +27,12 @@
 				<div class="col-md-6 contact-form wow fadeInRight animated animated" data-wow-delay=".5s">
 					<form>
 					
-						<input type="text" name="nam" placeholder="Name" required="">
-						<input type="text" placeholder="Email" required="">
-						<input type="text" placeholder="Subject" required="">
-						<textarea placeholder="Message" required=""></textarea>
-						<input type="submit" value="SEND">
+						<input type="text" class="form-control" name="nam" placeholder="Name" required="">
+						<input type="text" class="form-control" placeholder="Email" required="">
+						<input type="text" class="form-control" placeholder="Subject" required="">
+						<textarea class="form-control" placeholder="Message" required=""></textarea>
+						<br>
+						<button class="btn btn-success form-control" type="submit">SEND</button>
 					</form>
 				</div>
 				<div class="clearfix"> </div>

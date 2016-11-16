@@ -2,121 +2,88 @@
 
 @section('content')
 	<!-- about -->
-	<!-- about-top -->
-	<div class="about-top">
-		<!-- container -->
-		<div class="container">
-			<div class="about-info wow fadeInDown animated animated" data-wow-delay=".5s">
-				<h2>About Us</h2>
-			</div>
-	<div class="team-grids">
-					<div class="col-md-3 team-grid wow fadeInUp animated animated" data-wow-delay=".5s">
-						<h6><i class="material-icons">location_on</i>Best Destinations</h6>
-						<p> Curabitur orci massa convallis id mauris sed venenatis porttitor at leo nec purus</p>
-					</div>
-					<div class="col-md-3 team-grid wow fadeInUp animated animated" data-wow-delay=".5s">
-						<h6><i class="material-icons">star</i>Number 2</h6>
-						<p> Curabitur orci massa convallis id mauris sed venenatis porttitor at leo nec purus</p>
-					</div>
-					<div class="col-md-3 team-grid wow fadeInUp animated animated" data-wow-delay=".5s">
-						<h6><i class="material-icons">group</i>Number 3</h6>
-						<p> Curabitur orci massa convallis id mauris sed venenatis porttitor at leo nec purus</p>
-					</div>
-					
-					<div class="clearfix"> </div>
-	</div>
-		</div>
-		<!-- //container -->
-	</div>
-	<!-- //about-top -->
-	<!-- about-team -->
-	<div class="about-team">
-			<!-- container -->
+	<!-- banner -->
+		<div class="about-grids">
 			<div class="container">
-				<h3 class="wow fadeInUp animated animated" data-wow-delay=".5s">Our Team</h3>
-				<div class="team-grids">
-					<div class="col-md-3 team-grid wow fadeInUp animated animated" data-wow-delay=".5s">
-						<div class="team-grid-img">
-							<img src="images/t1.jpg" alt="" >
-							<div class="icons">
-								<ul>
-									<li><a href="#" class="twitter"></a></li>
-									<li><a href="#" class="twitter facebook"></a></li>
-									<li><a href="#" class="twitter chrome"></a></li>
-									<li><a href="#" class="twitter dribbble"></a></li>
-								</ul>
+				<div class="col-md-9 about-left">
+					<!-- about -->
+					<div class="about">
+							<div class="about-info">
+								<h3>About us</h3>
+								<h4>Quisque lectus ipsum, fermentum eu sodales non, auctor in mauris. Nulla pretium cursus nulla, ac rutrum magna laoreet eu.
+									Phasellus vel est vel odio finibus lacinia. Donec a diam dictum, elementum ipsum et, pulvina
+								</h4>
+								<p>Duis vulputate auctor libero, eget viverra ante dapibus sit amet. Vestibulum auctor pellentesque enim, 
+								sed ornare metus vehicula eu. Etiam rhoncus eu urna ac feugiat. Praesent sed tempor urna, laoreet dignissim est. 
+								Aenean nec justo vitae arcu consequat lobortis. Sed iaculis et dui eu sollicitudin. Morbi id felis porttitor tellus 
+								viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam cursus 
+								leo nec enim vulputate finibus. Nulla at dui non nisi molestie posuere non sed ante. 
+								Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Nulla at dui non nisi molestie posuere non sed ante. </p>
 							</div>
-						</div>
-						<h6>Mark Jerly Bundalian</h6>
-						<p> Curabitur orci massa convallis id mauris sed venenatis porttitor at leo nec purus</p>
 					</div>
-					<div class="col-md-3 team-grid wow fadeInUp animated animated" data-wow-delay=".5s">
-						<div class="team-grid-img">
-							<img src="images/t2.jpg" alt="" style="margin-right: -200px;">
-							<div class="icons">
-								<ul>
-									<li><a href="#" class="twitter"></a></li>
-									<li><a href="#" class="twitter facebook"></a></li>
-									<li><a href="#" class="twitter chrome"></a></li>
-									<li><a href="#" class="twitter dribbble"></a></li>
-								</ul>
+					<!-- about -->
+					<!-- team -->
+					<div class="team">
+							<div class="team-info">
+								<h3>Our Team</h3>
 							</div>
-						</div>
-						<h6>Janelle Lagatuz</h6>
-						<p> Curabitur orci massa convallis id mauris sed venenatis porttitor at leo nec purus</p>
-					</div>
-					<div class="col-md-3 team-grid wow fadeInUp animated animated" data-wow-delay=".5s">
-						<div class="team-grid-img">
-							<img src="images/t3.jpg" alt="" style="margin-right: 200px;">
-							<div class="icons">
-								<ul>
-									<li><a href="#" class="twitter"></a></li>
-									<li><a href="#" class="twitter facebook"></a></li>
-									<li><a href="#" class="twitter chrome"></a></li>
-									<li><a href="#" class="twitter dribbble"></a></li>
-								</ul>
+							<div class="team-grids">
+								<div class="team-grid">
+									<img src="images/avatar1.png" alt="" />
+									<div class="team-grid-info">
+										<h4>MARK JERLY BUNDALIAN</h4>
+										<p>Class aptent taciti sociosqu ad litora torquent per conu-
+											bia nostra, per inceptos himenaeos.
+										</p>
+									</div>
+								</div>
+								<div class="team-grid">
+									<img src="images/avatar2.png" alt="" />
+									<div class="team-grid-info">
+										<h4>JANELLE LAGATUZ</h4>
+										<p>Class aptent taciti sociosqu ad litora torquent per conu-
+											bia nostra, per inceptos himenaeos.
+										</p>
+									</div>
+								</div>
+								<div class="team-grid">
+									<img src="images/avatar3.png" alt="" />
+									<div class="team-grid-info">
+										<h4>JA BALBIN</h4>
+										<p>Class aptent taciti sociosqu ad litora torquent per conu-
+											bia nostra, per inceptos himenaeos.
+										</p>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
 							</div>
-						</div>
-						<h6>Mark Jerly Bundalian</h6>
-						<p> Curabitur orci massa convallis id mauris sed venenatis porttitor at leo nec purus</p>
 					</div>
-					
-					<div class="clearfix"> </div>
+					<!-- //team -->
 				</div>
-			</div>
-			<!-- //container -->
-	</div>
-	<!-- //about-team -->
-	<!-- about-bottom -->
-	<div class="about-bottom">
-		<!-- container -->
-		<div class="container">
-			<h3 class="wow fadeInUp animated animated" data-wow-delay=".5s">Your Guarantees</h3>
-			<div class="about-bottom-grids">
-				<div class="col-md-6 about-bottom-left">
-					<h4 class="wow fadeInUp animated animated" data-wow-delay=".5s">Morbi convallis urna sit amet feugiat</h4>
-					<p class="wow fadeInUp animated animated" data-wow-delay=".5s">Vivamus sit amet molestie orci. Nullam porttitor porta lobortis. Mauris semper feugiat varius. Mauris nec ligula 
-						diam. Cras ullamcorper lorem eu sapien viverra cursus. Pellentesque commodo libero eget malesuada blandit. 
-						<span>Integer at imperdiet orci. Donec laoreet dignissim ex, vitae hendrerit nulla. Praesent efficitur ex vel tempus 
-						blandit. Nunc sed purus ac sapien cursus eleifend vitae id ipsum. Mauris nec vehicula est. </span>
-						Nullam ac odio massa nullam et condimentum magna, eget congue dui.Sed sit amet laoreet libero. Duis faucibus 
-						felis et dolor ultrices pulvinar eu at orci.
-					</p>
-				</div>
-				<div class="col-md-6 about-bottom-left about-bottom-right">
-					<h4 class="wow fadeInUp animated animated" data-wow-delay=".5s">Morbi convallis urna sit amet feugiat</h4>
-					<p class="wow fadeInUp animated animated" data-wow-delay=".5s">Vivamus sit amet molestie orci. Nullam porttitor porta lobortis. Mauris semper feugiat varius. Mauris nec ligula 
-						diam. Cras ullamcorper lorem eu sapien viverra cursus. Pellentesque commodo libero eget malesuada blandit. 
-						<span>Integer at imperdiet orci. Donec laoreet dignissim ex, vitae hendrerit nulla. Praesent efficitur ex vel tempus 
-						blandit. Nunc sed purus ac sapien cursus eleifend vitae id ipsum. Mauris nec vehicula est. </span>
-						Nullam ac odio massa nullam et condimentum magna, eget congue dui.Sed sit amet laoreet libero. Duis faucibus 
-						felis et dolor ultrices pulvinar eu at orci.
-					</p>
+				<div class="col-md-3 about-right">
+					<div class="advantage-grids">
+						<h4>Our Advantages</h4>
+						<div class="advantage-grid">
+							<a href="#">Cras sit amet mi vitae nisi bibendum</a>
+							<p>Etiam ultricies magna mi, rutrum condimentum leo tincidunt ac. Vestibulum non scelerisque sapien.</p>
+						</div>
+						<div class="advantage-grid">
+							<a href="#">Cras sit amet mi vitae nisi bibendum</a>
+							<p>Etiam ultricies magna mi, rutrum condimentum leo tincidunt ac. Vestibulum non scelerisque sapien.</p>
+						</div>
+						<div class="advantage-grid">
+							<a href="#">Cras sit amet mi vitae nisi bibendum</a>
+							<p>Etiam ultricies magna mi, rutrum condimentum leo tincidunt ac. Vestibulum non scelerisque sapien.</p>
+						</div>
+					</div>
+					<div class="testimonial">
+						<h4>Testimoals</h4>
+						<p>Sed quam mauris, tempor nec hendrerit eu, pellentesque vel leo. Aliquam sed lorem odio.</p>
+						<p>Sed quam mauris, tempor nec hendrerit eu, pellentesque vel leo. Aliquam sed lorem odio.</p>
+					</div>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
-		<!-- //container -->
-	</div>
-	<!-- //about-bottom -->
-@stop
+	
+	@stop

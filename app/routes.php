@@ -20,6 +20,17 @@ Route::post('login', 'LoginController@store');
 
 Route::get('logout', 'LoginController@logout');
 
+Route::get('top', function() {
+	return View::make('top');
+});
+
+Route::get('testimonials', function() {
+	return View::make('testimonials');
+});
+Route::get('details', function() {
+	return View::make('tourism.details');
+});
+
 // Redirection when Authenticated
 Route::get('admin', ['before' => 'auth.basic', function(){
   $user = Auth::user();
