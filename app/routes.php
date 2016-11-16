@@ -55,7 +55,7 @@ Route::get('admin/pages/view_sites', ['before' => 'auth.basic', 'uses' => 'SiteC
 Route::get('admin/pages/price_list', ['before' => 'auth.basic', 'uses' => 'PriceListController@admin_index']);
 
 Route::get('admin/pages/logout', function() {
-  Auth::basic();
-  return Redirect::to('/');
+  Auth::logout();
+  return Redirect::to('/'); 
 });
 

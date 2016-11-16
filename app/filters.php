@@ -50,7 +50,7 @@ Route::filter('auth', function()
 
 Route::filter('auth.basic', function()
 {
-	if (! Auth::check()) return Auth::basic();
+	return Auth::basic();
 });
 
 /*
