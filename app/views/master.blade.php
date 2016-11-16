@@ -19,6 +19,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--// bootstrap-css -->
 <!-- css -->
 {{ HTML::style("css/style.css", array("media" => "all")) }}
+
 <!--// css -->
 <!-- font -->
 {{ HTML::style("//fonts.googleapis.com/css?family=Parisienne") }}
@@ -49,7 +50,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <!-- banner-top -->
 
 <style>
-body {margin:0;}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+  height: 100%;
+  
+  margin: 0;
+
+  padding: 0;
+
+}
 ul.topnav {
   list-style-type: none;
   margin: 0;
@@ -115,19 +126,6 @@ function myFunction() {
 </script>
 </head>
 <body>
-  <div class="banner-top">
-    <div class="container">
-      <div class="banner-top-left wow fadeInLeft animated animated" data-wow-delay=".5s">
-        <p>Email : <a href="mailto:example@email.com">mail@example.com</a></p>
-      </div>
-      <div class="banner-top-right wow fadeInRight animated animated" data-wow-delay=".5s">
-        <p>Phone : +1 234 567 8901</p>
-      </div>
-      <div class="clearfix"> </div>
-    </div>
-  </div>
-
-  
   
         <div class="header-top">
      <!--container-->
@@ -137,9 +135,10 @@ function myFunction() {
             <a href="/">{{ HTML::image('images/logo2.png', '', array('id' => 'section-1', 'class' => 'img-responsive')) }}</a>
             </div>
             <div class="menu">
+		   <li><a href="testimonials"><i class="fa fa-commenting"> Testimonials</a></li></i>
           <li><a href="contact"><i class="fa fa-phone"> Contact Us</a></li></i>
-          <li><a href="about"><i class="fa fa-list"> About</a></li></i>
-          <li><a href="#news"><i class="fa fa-globe"> Top Attractions</a></li></i>          
+          <li><a href="about"><i class="fa fa-info-circle">  About</a></li></i>
+          <li><a href="top"><i class="fa fa-globe"> Top Attractions</a></li></i>          
             <li><a class="active" href="/"><i class="fa fa-home"> Home</a></li></i>
           
           <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
@@ -152,68 +151,99 @@ function myFunction() {
 
   <!-- banner-top -->
   <!-- banner -->
-  <div class="banner">
-    <div class="container">
-      <div class="banner-grids">
-        <div class="t-logo wow zoomIn animated animated" data-wow-delay=".5s">
-          <div class="banner-left">
-            
-          </div>
-        </div>
-        <div class="banner-right">
-          <div class="banner-top-right-text wow fadeInUp animated animated" data-wow-delay=".5s">
-            <h2>CRAVING FOR ADVENTURE?</h2>
-          </div>
-          <div class="banner-right-top">
-            {{ HTML::script('js/responsiveslides.min.js') }}
-            <script>
-              // You can also use "$(window).load(function() {"
-              $(function () {
-                // Slideshow 4
-                $("#slider3").responsiveSlides({
-                auto: true,
-                pager: false,
-                nav: false,
-                speed: 500,
-                namespace: "callbacks",
-                before: function () {
-                  $('.events').append("<li>before event fired.</li>");
-                },
-                after: function () {
-                  $('.events').append("<li>after event fired.</li>");
-                }
-                });
-            
-              });
-            </script>
-            <div id="top" class="callbacks_container">
-              <ul class="rslides callbacks callbacks1" id="slider3">
-                <li id="callbacks1_s0" class="callbacks1_on" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out;">
-                  <div class="banner-right-info">
-                    <h3 class="wow fadeInUp animated animated" data-wow-delay=".5s">Come and explore the amazing beauty of Philippines</h3>
-                    <p class="wow fadeInUp animated animated" data-wow-delay=".5s">Lorem ipsum dolor sit amet consectetur adipiscing elit duis convallis erat est a euismod justo fringilla ut vestibulum a magna tempus sapien gravida consequat.</p>
-                  </div>
-                </li>
-                <li id="callbacks1_s1" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
-                  <div class="banner-right-info">
-                    <h3>Enjoy your stay!</h3>
-                    <p>Dolor lorem ipsum sit amet consectetur adipiscing elit duis convallis erat est a euismod justo fringilla ut vestibulum a magna tempus sapien consequat gravida.</p>
-                  </div>
-                </li>
-                <li id="callbacks1_s2" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
-                  <div class="banner-right-info">
-                    <h3>Wonderful Philippines</h3>
-                    <p>Dolor lorem ipsum sit amet consectetur adipiscing elit duis convallis erat est a euismod justo fringilla ut vestibulum a magna tempus sapien consequat gravida.</p>
-                  </div>
-                </li>
-              </ul></div>
-          </div>
-        </div>
-        <div class="clearfix"> </div>
-      </div>
-    </div>
-
-  </div>
+ <div class="banner">
+		<div class="container">
+			<div class="banner-grids">
+				<div class="t-logo wow zoomIn animated animated" data-wow-delay=".5s">
+					
+				</div>
+				<div class="banner-right">
+					<div class="banner-top-right-text wow fadeInUp animated animated" data-wow-delay=".5s">
+						<h2>Your travel Buddy</h2>
+					</div>
+					<div class="banner-right-top">
+						<script src="js/responsiveslides.min.js"></script>
+						<script>
+							// You can also use "$(window).load(function() {"
+							$(function () {
+							  // Slideshow 4
+							  $("#slider3").responsiveSlides({
+								auto: true,
+								pager: false,
+								nav: false,
+								speed: 500,
+								namespace: "callbacks",
+								before: function () {
+								  $('.events').append("<li>before event fired.</li>");
+								},
+								after: function () {
+								  $('.events').append("<li>after event fired.</li>");
+								}
+							  });
+						
+							});
+							
+						</script>
+						<link href="css/owl.carousel.css" rel="stylesheet">
+							    <script src="js/owl.carousel.js"></script>
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo1").owlCarousel({
+							        items : 1,
+							        lazyLoad : true,
+							        autoPlay : true,
+							        navigation : false,
+							        navigationText :  false,
+							        pagination : true,
+							      });
+							    });
+							    </script>
+						
+						<div id="top" class="callbacks_container">
+							<ul class="rslides callbacks callbacks1" id="slider3">
+								<li id="callbacks1_s0" class="callbacks1_on" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out;">
+									<div class="banner-right-info">
+										<h3 class="wow fadeInUp animated animated" data-wow-delay=".5s">Nulla at magna sit amet nibh posuere malesuada</h3>
+										<p class="wow fadeInUp animated animated" data-wow-delay=".5s">Lorem ipsum dolor sit amet consectetur adipiscing elit duis convallis erat est a euismod justo fringilla ut vestibulum a magna tempus sapien gravida consequat.</p>
+										<div class="more-button wow fadeInUp animated animated" data-wow-delay=".5s">
+											<a href="single.html">Click Here	</a>
+										</div>
+									</div>
+								</li>
+								<li id="callbacks1_s1" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
+									<div class="banner-right-info">
+										<h3>Magna mulla at sit amet nibh malesuada posuere</h3>
+										<p>Dolor lorem ipsum sit amet consectetur adipiscing elit duis convallis erat est a euismod justo fringilla ut vestibulum a magna tempus sapien consequat gravida.</p>
+										<div class="more-button">
+											<a href="single.html">Click Here	</a>
+										</div>
+									</div>
+								</li>
+							</ul><ul class="callbacks_tabs callbacks1_tabs"><li class="callbacks1_s1 callbacks_here"><a href="#" class="callbacks1_s1">1</a></li><li class="callbacks1_s2"><a href="#" class="callbacks1_s2">2</a></li></ul>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="top-navigation">
+			<div class="container">
+				<div class="top-nav">
+					<nav class="navbar navbar-default">
+						<div class="container">
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+							
+							</ul>	
+							<div class="clearfix"> </div>
+						</div>	
+					</nav>		
+				</div>
+			</div>
+		</div>
+	</div>
   <!-- //banner -->
 
   @yield('content')
