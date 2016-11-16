@@ -18,6 +18,10 @@ Route::get('/', 'TourPackageController@getPackages');
 Route::resource('contacts', 'ContactController');
 Route::resource('feedback', 'FeedbackController');
 Route::resource('tours', 'TourPackageController');
+Route::resource('itinerary', 'ItineraryController');
+Route::resource('prices', 'PriceListController');
+Route::resource('sites', 'SiteController');
+Route::resource('reviews', 'TourReviewController');
 
 Route::get('about', function(){
   return View::make('tourism.about');
@@ -31,11 +35,6 @@ Route::get('contact', function() {
 Route::get('details', 'TourPackageController@details');
 
 // admin Routes
-Route::get('tourism', function() {
-  return View::make('admin.tourism');
-
-});
-
 Route::get('admin/pages/', function() {
   return Redirect::to('admin/pages/view_feeds');
 });
