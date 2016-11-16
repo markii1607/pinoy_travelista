@@ -44,7 +44,7 @@ html, body{
     font-weight: 600;	
 }
 .banner{
-    background: url(../images/1.jpg) no-repeat 0px 0px;
+    background: url(../images/banner.jpg) no-repeat 0px 0px;
     background-size: cover;
 }
 .banner-grids{
@@ -2513,9 +2513,9 @@ body {
   color : black;
   background-color: #fff;
   padding : 5px 15px;
+  border: 2px solid #ddd;
 }
 
-<<<<<<< HEAD
 
 
 
@@ -2551,14 +2551,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-=======
 /*-- about --*/
 .header-bg {
   min-height: 400px !important;
@@ -2568,7 +2560,7 @@ body {
 }
 .about-grids {
   padding: 3em 0 1em 0;
-  background: url(../images/bg_1.jpg) no-repeat 0px 0px;
+  background-color: #fff;
   background-size: cover;
 }
 .green{

@@ -15,8 +15,7 @@ class TourPackageController extends \BaseController {
 	 */
 	public function index()
 	{
-		$packages = $this->model->all();
-  	return View::make('admin.tourPackages')->withPackages($packages);
+
 	}
 
 
@@ -101,6 +100,16 @@ class TourPackageController extends \BaseController {
 		$others = $this->model->where('id', '!=', $id)->get();
 
 		return View::make('tourism.details')->withPackage($package)->withOthers($others);
+	}
+
+	public function admin_index() {
+		$packages = $this->model->all();
+  	return View::make('admin.tourPackages')->withPackages($packages);
+	}
+
+	public function getTours() {
+		$packages = $this->model->select(['id', 'name', 'location', 'description', 'filename'])->get();
+		return View::make('tourism.top')->withPackages($packages);
 	}
 
 }

@@ -84,7 +84,7 @@
 	 <div class="client-say-layer">
 	     <div class="client-say-head text-center">
 			  <h3>TOUR REVIEWS</h3>
-			  <span></span><img src="images/face.png" alt=""><span></span>
+			  <span></span>{{ HTML::image('images/face.png') }}<span></span>
 			  <!-- requried-jsfiles-for owl -->
 				
 			 <!-- //requried-jsfiles-for owl -->

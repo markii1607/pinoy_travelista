@@ -40,7 +40,6 @@
 										<figcaption>
 											<h3>{{ $package->name }}</h3>
 											<p>{{ $package->location }}</p>
-											<p>{{ $package->description }}</p>
 										</figcaption>	
 									</a>
 								</figure>

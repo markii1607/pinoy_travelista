@@ -29,7 +29,7 @@
 							</div>
 							<div class="team-grids">
 								<div class="team-grid">
-									<img src="images/avatar1.png" alt="" />
+									<img src="images/mark_pic.jpg" height="500" width="500" alt="" />
 									<div class="team-grid-info">
 										<h4>MARK JERLY BUNDALIAN</h4>
 										<p>Class aptent taciti sociosqu ad litora torquent per conu-
@@ -38,7 +38,7 @@
 									</div>
 								</div>
 								<div class="team-grid">
-									<img src="images/avatar2.png" alt="" />
+									<img src="images/avatar2.png" height="500" width="500" alt="" />
 									<div class="team-grid-info">
 										<h4>JANELLE LAGATUZ</h4>
 										<p>Class aptent taciti sociosqu ad litora torquent per conu-
@@ -47,7 +47,7 @@
 									</div>
 								</div>
 								<div class="team-grid">
-									<img src="images/avatar3.png" alt="" />
+									<img src="images/balbs_pic.jpg" height="500" width="500" alt="" />
 									<div class="team-grid-info">
 										<h4>JA BALBIN</h4>
 										<p>Class aptent taciti sociosqu ad litora torquent per conu-
@@ -62,6 +62,7 @@
 				</div>
 				<div class="col-md-3 about-right">
 					<div class="advantage-grids">
+					<br>
 						<h4>Our Advantages</h4>
 						<div class="advantage-grid">
 							<a href="#">Cras sit amet mi vitae nisi bibendum</a>
@@ -77,7 +78,7 @@
 						</div>
 					</div>
 					<div class="testimonial">
-						<h4>Testimoals</h4>
+						<h4>Testimonials</h4>
 						<p>Sed quam mauris, tempor nec hendrerit eu, pellentesque vel leo. Aliquam sed lorem odio.</p>
 						<p>Sed quam mauris, tempor nec hendrerit eu, pellentesque vel leo. Aliquam sed lorem odio.</p>
 					</div>

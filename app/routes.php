@@ -27,9 +27,11 @@ Route::get('about', function(){
   return View::make('tourism.about');
 });
 
-Route::get('contact', function() {
-  return View::make('tourism.contact');
+Route::get('testimonials', function() {
+  return View::make('tourism.testimonials');
 });
+
+Route::get('top', 'TourPackageController@getTours');
 
 // Route::get('details/{id}', 'TourPackageController@show');
 Route::get('details', 'TourPackageController@details');
