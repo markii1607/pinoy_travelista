@@ -20,8 +20,7 @@ html, body{
 /*-- banner --*/
 .banner-top{
     padding: .5em 0;
-	position:fixed;
-	}
+}
 .banner-top-left{
 	float:left;
 }
@@ -29,15 +28,11 @@ html, body{
 	color: #000000;
     margin:0;
     font-size: .875em;
-    font-weight: 600;
-	position:fixed;
-	
+    font-weight: 600;	
 }
 .banner-top-left p a{
 	color: #000000;
 	text-decoration:none;
-		position:fixed;
-
 }
 .banner-top-right{
 	float:right;
@@ -47,28 +42,23 @@ html, body{
     margin:0;
     font-size: .875em;
     font-weight: 600;	
-		position:fixed;
-
 }
 .banner{
-    background: url(../images/bicol/banner.jpg) no-repeat 0px 0px;
+    background: url(../images/1.jpg) no-repeat 0px 0px;
     background-size: cover;
-	
 }
 .banner-grids{
     margin-top: 9em;
 }
 .banner-left {
-    float: left;
-    width: 30%;
-    padding: 7.6em 0;
-     text-align: center;
-    position: relative;
-    transform: rotate(45deg);
-	
+     float: right;
+    width: 50%;
+    background: rgba(255, 255, 255, 0);
+    text-align: center;
+    position: relative;  
 }
 .banner-logo {
-    -webkit-transform: rotate(0-0deg);
+    -webkit-transform: rotate(315deg);
     -moz-transform: rotate(315deg);
     -ms-transform: rotate(315deg);
     -o-transform: rotate(315deg);
@@ -76,14 +66,14 @@ html, body{
 }
 .banner-left h1{
     font-size: 7em;
-    font-family: 'Lato';
+    font-family: 'Dorsa-Regular';
     line-height: .8em;
     margin: 0;
 }
 .banner-left a{
     text-decoration: none;
-    color: #6a0707;
-    font-family: 'Allura Regular', cursive;
+    color: #EE732F;
+    font-family: 'Parisienne', cursive;
 }
 .banner-left p{
     color: #000000;
@@ -2614,12 +2604,7 @@ clear: both;
 border-bottom:1px solid rgba(128, 128, 128, 0.17);
 }
 
-#banner {
-	width: 100%;
-	height: 273px;
-    background-color: gray;
-	overflow: hidden;
-}
+
 
 #nav_bar {
 	border: 0;
@@ -2776,6 +2761,44 @@ body {
   background-color: #fff;
   padding : 5px 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

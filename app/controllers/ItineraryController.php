@@ -15,7 +15,7 @@ class ItineraryController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		
 	}
 
 
@@ -86,6 +86,11 @@ class ItineraryController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function admin_index() {
+		$itineraries = $this->model->with('tour_package')->get();
+		return View::make('admin.viewItineraries')->withItineraries($itineraries);
 	}
 
 

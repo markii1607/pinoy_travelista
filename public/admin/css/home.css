@@ -1,0 +1,42 @@
+#icon_nav{
+	width: 150px;
+	height: 0px;
+	margin-top: 5px;
+	margin-left: 80px;
+	margin-right: 80px;
+	margin-bottom: 0px;
+	border-radius: 15px;
+	padding: 2px;
+	float: left;
+	}
+#name{
+	text-align: center;
+	width: 80px;
+	float: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	color: #040C4F;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-left: 80px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	border-radius: 15px;
+
+	}
+#icon_nav img{
+    border: 5px solid #040C4F;
+	border-radius:15px;
+    float: center;
+    border-spacing:5px;
+    -webkit-transition: margin 0.5s ease-out;
+    -moz-transition: margin 0.5s ease-out;
+    -o-transition: margin 0.5s ease-out;
+}
+ 
+#icon_nav img:hover {
+    margin-left:10px;
+}
+#icon_nav a{
+	color:#040C4F;
+	}

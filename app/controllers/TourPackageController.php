@@ -15,7 +15,8 @@ class TourPackageController extends \BaseController {
 	 */
 	public function index()
 	{
-		return $this->model->with(['tour_reviews', 'itineraries', 'sites', 'price_lists'])->get();
+		$packages = $this->model->all();
+  	return View::make('admin.tourPackages')->withPackages($packages);
 	}
 
 

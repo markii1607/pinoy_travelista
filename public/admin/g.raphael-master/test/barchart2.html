@@ -1,0 +1,88 @@
+
+<?php
+	
+
+	$dbname = 'sample';
+	$host = 'localhost';
+	$user = 'root';
+	$pass = '';
+	mysql_connect($host,$user,$pass) or die("CONNECTION ERROR: Unable to connect to server.");
+	mysql_select_db($dbname) or die("SELECTION ERROR: Unable to load the database.");
+	
+  
+
+	
+  
+$grade_7= mysql_query ("SELECT COUNT(grade_id) as grade7 FROM es_enrollment  WHERE es_enrollment.grade_id='1'")or die(mysql_error());
+$g7 = mysql_fetch_assoc($grade_7);
+
+$grade_8= mysql_query ("SELECT COUNT(grade_id) as grade8 FROM es_enrollment  WHERE es_enrollment.grade_id='2'")or die(mysql_error());
+$g8 = mysql_fetch_assoc($grade_8);
+
+$grade_9= mysql_query ("SELECT COUNT(grade_id) as grade9 FROM es_enrollment  WHERE es_enrollment.grade_id='3'")or die(mysql_error());
+$g9 = mysql_fetch_assoc($grade_9);
+
+$grade_10= mysql_query ("SELECT COUNT(grade_id) as grade10 FROM es_enrollment  WHERE es_enrollment.grade_id='4'")or die(mysql_error());
+$g10 = mysql_fetch_assoc($grade_10);
+
+$grade_11 = mysql_query ("SELECT COUNT(grade_id) as grade11 FROM es_enrollment  WHERE es_enrollment.grade_id='5'")or die(mysql_error());
+$g11 = mysql_fetch_assoc($grade_11);
+
+$grade_12 = mysql_query ("SELECT COUNT(grade_id) as grade12 FROM es_enrollment  WHERE es_enrollment.grade_id='6'")or die(mysql_error());
+$g12 = mysql_fetch_assoc($grade_12);
+
+$total_students= mysql_query ("SELECT COUNT(stud_id) FROM es_enrollment")or die(mysql_error());
+
+
+
+
+?>
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>gRaphaël Dynamic Bar Chart</title>
+        <link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="css/demo-print.css" type="text/css" media="print" charset="utf-8">
+        <script src="../raphael-min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../g.raphael.js" type="text/javascript"></script>
+        <script src="../g.bar.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            window.onload = function () {
+                var r = Raphael("holder"),
+                    fin = function () {
+                        this.flag = r.popup(this.bar.x, this.bar.y, this.bar.value || "0").insertBefore(this);
+                    },
+                    fout = function () {
+                        this.flag.animate({opacity: 0}, 300, function () {this.remove();});
+                    },
+                    fin2 = function () {
+                        var y = [], res = [];
+                        for (var i = this.bars.length; i--;) {
+                            y.push(this.bars[i].y);
+                            res.push(this.bars[i].value || "0");
+                        }
+                        this.flag = r.popup(this.bars[0].x, Math.min.apply(Math, y), res.join(", ")).insertBefore(this);
+                    },
+                    fout2 = function () {
+                        this.flag.animate({opacity: 0}, 300, function () {this.remove();});
+                    },
+                    txtattr = { font: "12px 'Fontin Sans', Fontin-Sans, sans-serif" };
+                
+                r.text(160, 10, "Graph").attr({font : "20px 'Trajan Pro'"});
+                
+                bar = r.barchart(10, 10, 300, 220, [<?php echo $g7['grade7']; ?>, <?php echo $g8['grade8']; ?>, <?php echo $g9['grade9']; ?>, <?php echo $g10['grade10']; ?>, <?php echo $g11['grade11']; ?>, <?php echo $g12['grade12']; ?>], {legend: ["%%.%% - Grade 7", "%%.%% - Grade 8", "%%.%% - Grade 9", "%%.%% - Grade 10", "%%.%% - Grade 11", "%%.%% - Grade 12"]);
+				
+               
+            };
+        </script>
+    </head>
+    <body class="raphael" id="g.raphael.dmitry.baranovskiy.com">
+        <div id="holder"></div>
+        <p>
+            Demo of <a href="http://g.raphaeljs.com/">gRaphaël</a> JavaScript library.
+        </p>
+    </body>
+</html>

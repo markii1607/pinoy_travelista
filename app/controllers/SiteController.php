@@ -15,7 +15,7 @@ class SiteController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		
 	}
 
 
@@ -86,6 +86,11 @@ class SiteController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function admin_index() {
+		$sites = $this->model->with('tour_package')->get();
+		return View::make('admin.viewSites')->withSites($sites);
 	}
 
 

@@ -15,7 +15,7 @@ class TourReviewController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+
 	}
 
 
@@ -86,6 +86,11 @@ class TourReviewController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function admin_index() {
+		$reviews = $this->model->with('tour_package')->get();
+		return View::make('admin.tourReview')->withReviews($reviews);
 	}
 
 

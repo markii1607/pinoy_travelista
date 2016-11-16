@@ -15,7 +15,7 @@ class ContactController extends \BaseController {
 	 */
 	public function index()
 	{
-		return $this->model->all();
+
 	}
 
 
@@ -86,6 +86,11 @@ class ContactController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function admin_index(){
+		$contacts = $this->model->all();
+		return View::make('admin.viewContacts')->withContacts($contacts);
 	}
 
 
