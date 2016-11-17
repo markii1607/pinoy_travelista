@@ -30,7 +30,7 @@ Route::get('about', function(){
 });
 
 Route::get('asd', function(){
-  return View::make('admin-master2');
+  return View::make('admin.addItineraries');
 });
 
 // individual page routes (Controllers)

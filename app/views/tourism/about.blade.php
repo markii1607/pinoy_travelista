@@ -10,15 +10,9 @@
 					<div class="about">
 							<div class="about-info">
 								<h3>About us</h3>
-								<h4>Quisque lectus ipsum, fermentum eu sodales non, auctor in mauris. Nulla pretium cursus nulla, ac rutrum magna laoreet eu.
-									Phasellus vel est vel odio finibus lacinia. Donec a diam dictum, elementum ipsum et, pulvina
-								</h4>
-								<p>Duis vulputate auctor libero, eget viverra ante dapibus sit amet. Vestibulum auctor pellentesque enim, 
-								sed ornare metus vehicula eu. Etiam rhoncus eu urna ac feugiat. Praesent sed tempor urna, laoreet dignissim est. 
-								Aenean nec justo vitae arcu consequat lobortis. Sed iaculis et dui eu sollicitudin. Morbi id felis porttitor tellus 
-								viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam cursus 
-								leo nec enim vulputate finibus. Nulla at dui non nisi molestie posuere non sed ante. 
-								Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Nulla at dui non nisi molestie posuere non sed ante. </p>
+								<p>Pinoy Travelista is a Bicol Travel Agency founded in 2013 whose head office is in Legazpi City, Albay. We offer packages that will surely maximize the travel experience of our clients at a minimum cost. We want our travelers to have quality service that matches their needs and budget. 
+								</p>
+								<p>What we want is for you to experience the beautiful wonders of the Philippines</p>
 							</div>
 					</div>
 					<!-- about -->
@@ -32,8 +26,7 @@
 									<img src="images/mark_pic.jpg" height="500" width="500" alt="" />
 									<div class="team-grid-info">
 										<h4>MARK JERLY BUNDALIAN</h4>
-										<p>Class aptent taciti sociosqu ad litora torquent per conu-
-											bia nostra, per inceptos himenaeos.
+										<p>
 										</p>
 									</div>
 								</div>
@@ -41,8 +34,7 @@
 									<img src="images/avatar2.png" height="500" width="500" alt="" />
 									<div class="team-grid-info">
 										<h4>JANELLE LAGATUZ</h4>
-										<p>Class aptent taciti sociosqu ad litora torquent per conu-
-											bia nostra, per inceptos himenaeos.
+										<p>
 										</p>
 									</div>
 								</div>
@@ -50,8 +42,7 @@
 									<img src="images/balbs_pic.jpg" height="500" width="500" alt="" />
 									<div class="team-grid-info">
 										<h4>JA BALBIN</h4>
-										<p>Class aptent taciti sociosqu ad litora torquent per conu-
-											bia nostra, per inceptos himenaeos.
+										<p>
 										</p>
 									</div>
 								</div>
@@ -65,23 +56,23 @@
 					<br>
 						<h4>Our Advantages</h4>
 						<div class="advantage-grid">
-							<a href="#">Cras sit amet mi vitae nisi bibendum</a>
-							<p>Etiam ultricies magna mi, rutrum condimentum leo tincidunt ac. Vestibulum non scelerisque sapien.</p>
+							<a href="#">We cater travelers of all ages from any parts of the world</a>
+							<p>Want to travel? Pack now and we’ll help to reach your destinations!</p>
 						</div>
 						<div class="advantage-grid">
-							<a href="#">Cras sit amet mi vitae nisi bibendum</a>
-							<p>Etiam ultricies magna mi, rutrum condimentum leo tincidunt ac. Vestibulum non scelerisque sapien.</p>
+							<a href="#">Provides excellent customer service</a>
+							<p>Customer always comes first, you’ll always be in good hands.</p>
 						</div>
 						<div class="advantage-grid">
-							<a href="#">Cras sit amet mi vitae nisi bibendum</a>
-							<p>Etiam ultricies magna mi, rutrum condimentum leo tincidunt ac. Vestibulum non scelerisque sapien.</p>
+							<a href="#">Provide quality travel service that matches the needs and budget of the clients.</a>
+							<p>We will not let money limit the fun and experience that you deserve.</p>
 						</div>
 					</div>
-					<div class="testimonial">
+					<!-- <div class="testimonial">
 						<h4>Testimonials</h4>
 						<p>Sed quam mauris, tempor nec hendrerit eu, pellentesque vel leo. Aliquam sed lorem odio.</p>
 						<p>Sed quam mauris, tempor nec hendrerit eu, pellentesque vel leo. Aliquam sed lorem odio.</p>
-					</div>
+					</div> -->
 				</div>
 				<div class="clearfix"> </div>
 			</div>

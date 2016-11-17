@@ -5,9 +5,9 @@
 	<div class="welcome">
 		<div class="container">
 			<div class="col-md-6 welcome-left">
-				<h3 class="wow fadeInLeft animated animated" data-wow-delay=".5s">Welcome</h3>
-				<h4 class="wow fadeInLeft animated animated" data-wow-delay=".5s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta erat sit amet eros sagittis, quis hendrerit libero aliquam. Fusce semper augue ac dolor efficitur, a pretium metus pellentesque.</h4>
-				<p class="wow fadeInLeft animated animated" data-wow-delay=".5s">Sed posuere laoreet neque, eu rhoncus libero accumsan eget. Morbi tempor nibh ullamcorper urna hendrerit, at molestie tortor molestie. Suspendisse vel porttitor metus, vitae luctus velit. Donec dictum suscipit orci nec facilisis. Sed pretium eu diam id tincidunt. </p>
+				<h3 class="wow fadeInLeft animated animated" data-wow-delay=".5s">Welcome to Pinoy Travelista! </h3>
+				<h4 class="wow fadeInLeft animated animated" data-wow-delay=".5s">It’s our pleasure that you have chosen us as your travel agency as you explore the wonders of the Philippines.</h4>
+				<!-- <p class="wow fadeInLeft animated animated" data-wow-delay=".5s">Sed posuere laoreet neque, eu rhoncus libero accumsan eget. Morbi tempor nibh ullamcorper urna hendrerit, at molestie tortor molestie. Suspendisse vel porttitor metus, vitae luctus velit. Donec dictum suscipit orci nec facilisis. Sed pretium eu diam id tincidunt. </p> -->
 			</div>
 			<div class="col-md-6 welcome-right">
 				<div class="welcome-right-top wow fadeInUp animated animated" data-wow-delay=".5s">
