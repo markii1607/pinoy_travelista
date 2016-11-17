@@ -17,6 +17,8 @@ class CreateSitesTable extends Migration {
 			$table->increments('id');
 			$table->unsignedInteger('tour_package_id')->index()->nullable();
 			$table->string('name');
+			$table->string('folder');
+			$table->string('filename');
 			$table->timestamps();
 		});
 	}

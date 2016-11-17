@@ -1,5 +1,6 @@
 <?php
 
+// Resourceful Controller for the TourPackage Model
 class TourPackageController extends \BaseController {
 
 	protected $model;
@@ -8,25 +9,14 @@ class TourPackageController extends \BaseController {
 		$this->model = $model;
 	}
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-
-	}
-
 
 	/**
 	 * Show the form for creating a new resource.
 	 *
 	 * @return Response
 	 */
-	public function create()
-	{
-		//
+	public function create() {
+		return View::make('admin.addtourPackages');
 	}
 
 
@@ -37,19 +27,53 @@ class TourPackageController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
-	}
+    $origName = "";
+    $data = Input::all();
 
+    // validation
+    if (! $this->model->isValid($data)) {
+      return Redirect::back()->withInput()->withErrors($this->model->errors);
+    }
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
+    // image upload
+    if (Input::has('folder')) {
+			if (Input::hasFile('file')) {
+				$folder = $data->folder;
+		    $file = Input::file('file');
+		    $origName = $file->getClientOriginalName();
+		    $type = $file->getMimeType();
 
+		    // restrict mime type to jpg and png
+		    if ($type == 'image/jpeg' || $type == 'image/png') {
+		    	$url = "public/images/".$folder;
+			    $imgUrl = "public/images/".$folder."/".$origName;
+
+			    // upload to public/images directory
+			    $file->move($url, $origName);
+	 
+			    // resize the picture
+		    	$image = Image::make(sprintf($url."/%s", $origName))->resize(600, 400)->save();
+		    }
+	    }
+		}
+
+    $store = new TourPackage;
+    $store->folder = $data->folder;
+    $store->filename = $origName;
+    $store->location = $data->location;
+    $store->description = $data->description;
+    $store->travel_time = $data->travel_time;
+    $store->package_inclusion = $data->package_inclusion;
+    $store->package_exclusion = $data->package_exclusion;
+    $store->avail = $data->avail;
+    $store->no_of_days = $data->no_of_days;
+    $store->save();
+
+    if ($store) {
+      return Redirect::back();
+    }
+
+    return Redirect::back()->withInput();
 	}
 
 
@@ -61,7 +85,7 @@ class TourPackageController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		return View::make('admin.editPackages');
 	}
 
 
@@ -73,7 +97,12 @@ class TourPackageController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$package = $this->model->find($id);
+		$package->tour_package_id = Input::get('tour_package_id');
+		$package->name = Input::get('name');
+		$package->save();
+
+		return Redirect::to('admin/pages/tour_packages');
 	}
 
 
@@ -85,30 +114,54 @@ class TourPackageController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$package = $this->model->find($id);
+		$package->delete();
+
+		return Redirect::back();
 	}
 
+	/**
+	 * Get list of tour packages.
+	 *
+	 * @return Response
+	 */
 	public function getPackages() {
-		$packages = $this->model->select(['id', 'name', 'location', 'description', 'filename'])->get();
+		$packages = $this->model->select(['id', 'name', 'location', 'description', 'folder', 'filename'])->get();
 		return View::make('tourism.index')->withPackages($packages);
 	}
 
+	/**
+	 * Get the details about a package and the details about the other packages.
+	 *
+	 * @return Response
+	 */
 	public function details() {
 		$id = Input::get('id');
 		$package = $this->model->with(['tour_reviews', 'itineraries', 'sites', 'price_lists'])->find($id);
+		$reviews = TourReview::whereTourPackageId($id)->orderBy('review', 'asc')->take(15)->get();
 
 		$others = $this->model->where('id', '!=', $id)->get();
 
-		return View::make('tourism.details')->withPackage($package)->withOthers($others);
+		return View::make('tourism.details')->withPackage($package)->withOthers($others)->withId($id)->withReviews($reviews);
 	}
 
+	/**
+	 * Display list of resources in the admin side.
+	 *
+	 * @return Response
+	 */
 	public function admin_index() {
 		$packages = $this->model->all();
   	return View::make('admin.tourPackages')->withPackages($packages);
 	}
 
+	/**
+	 * Display list of packages.
+	 *
+	 * @return Response
+	 */
 	public function getTours() {
-		$packages = $this->model->select(['id', 'name', 'location', 'description', 'filename'])->get();
+		$packages = $this->model->select(['id', 'name', 'location', 'description', 'folder', 'filename'])->get();
 		return View::make('tourism.top')->withPackages($packages);
 	}
 

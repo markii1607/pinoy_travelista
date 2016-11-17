@@ -1,21 +1,12 @@
 <?php
 
+// Resourceful Controller for the PriceList Model
 class PriceListController extends \BaseController {
 
 	protected $model;
 
 	public function __construct(PriceList $model) {
 		$this->model = $model;
-	}
-
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		
 	}
 
 
@@ -26,9 +17,9 @@ class PriceListController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		
 	}
-
+	
 
 	/**
 	 * Store a newly created resource in storage.
@@ -37,21 +28,20 @@ class PriceListController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+    $data = Input::all();
+
+    if (! $this->model->isValid($data)) {
+      return Redirect::back()->withInput()->withErrors($this->model->errors);
+    }
+
+    $store = $this->model->create($data);
+
+    if ($store) {
+      return Redirect::back();
+    }
+
+    return Redirect::back()->withInput();
 	}
-
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
 
 	/**
 	 * Show the form for editing the specified resource.
@@ -73,7 +63,12 @@ class PriceListController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$price = $this->model->find($id);
+		$price->tour_package_id = Input::get('tour_package_id');
+		$price->name = Input::get('name');
+		$price->save();
+
+		return Redirect::to('admin/pages/price_list');
 	}
 
 
@@ -85,9 +80,17 @@ class PriceListController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$price = $this->model->find($id);
+		$price->delete();
+
+		return Redirect::back();
 	}
 
+	/**
+	 * Display list of resources in the admin side.
+	 *
+	 * @return Response
+	 */
 	public function admin_index() {
 		$lists = $this->model->with('tour_package')->get();
 		return View::make('admin.priceList')->withLists($lists);

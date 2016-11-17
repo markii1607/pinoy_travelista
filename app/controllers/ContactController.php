@@ -1,5 +1,6 @@
 <?php
 
+// Resourceful Controller for the Contact Model
 class ContactController extends \BaseController {
 
 	protected $model;
@@ -20,60 +21,25 @@ class ContactController extends \BaseController {
 
 
 	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-
-	}
-
-
-	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
-		//
-	}
+		$data = Input::all();
 
+		if (! $this->model->isValid($data)) {
+			return Redirect::back()->withInput()->withErrors($this->model->errors);
+		}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
+		$store = $this->model->create($data);
 
+		if ($store) {
+			return Redirect::back();
+		}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
+		return Redirect::back()->withInput();
 	}
 
 
@@ -85,9 +51,17 @@ class ContactController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$contact = $this->model->find($id);
+		$contact->delete();
+
+		return Redirect::back();
 	}
 
+	/**
+	 * Display list of resources in the admin side.
+	 *
+	 * @return Response
+	 */
 	public function admin_index(){
 		$contacts = $this->model->all();
 		return View::make('admin.viewContacts')->withContacts($contacts);

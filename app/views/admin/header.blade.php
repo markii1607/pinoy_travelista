@@ -115,7 +115,7 @@
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="view_feeds" class="logo">
+    <a href="../index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>P</b>T</span>
       <!-- logo for regular state and mobile devices -->
@@ -136,22 +136,27 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <span class="hidden-xs">Welcome, Admin</span>
+              <span class="hidden-xs">Admin</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
                 <img src="../images/logo2.png" class="img-circle" alt="User Image">
 
-                
+                <p>
+                  Administrator
+                  <small>Bicol University College of Science</small>
+                </p>
               </li>
+              <!-- Menu Body -->
+              
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="accounts.php" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="logout" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -172,7 +177,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          {{ HTML::image('images/logo2.png', 'User Image') }}
+          <img src="../images/logo2.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Admin</p>
@@ -184,49 +189,76 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
-               <li class="treeview">
-          <a href="view_feeds">
-            <i class="fa fa-share"></i> <span>Feedbacks</span>
-            <i class="fa fa-angle-left pull-right"></i>
+           <li class="treeview">
+          <a href="viewFeedback.php">
+            <i class="fa fa-bullhorn"></i>
+            <span>Feedbacks</span>
+            <i class="fa fa-angle-right pull-right"></i>
+
           </a>
-		  </li>
-		  <li class="treeview">
-          <a href="tour_reviews">
+          
+        </li>
+      <li class="treeview">
+          <a href="tourReview.php">
             <i class="fa fa-share"></i> <span>Tour Reviews</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
-		  </li>
-		  <li class="treeview">
-          <a href="tour_packages">
-            <i class="fa fa-share"></i> <span>Tour Packages</span>
-            <i class="fa fa-angle-left pull-right"></i>
+      </li>
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share"></i>
+            <span>Tour Packages</span>
+            <i class="fa fa-angle-right pull-right"></i>
+
           </a>
-		  </li>
-		  <li class="treeview">
-          <a href="view_itineraries">
-            <i class="fa fa-share"></i> <span>Iteniraries</span>
-            <i class="fa fa-angle-left pull-right"></i>
+          <ul class="treeview-menu">
+            <li><a href="tourPackages.php"><i class="fa fa-circle-o"></i> List</a></li>
+            <li><a href="addtourPackages.php"><i class="fa fa-circle-o"></i> Add Package</a></li>
+          </ul>
+        </li>
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share"></i>
+            <span>Itineraries</span>
+            <i class="fa fa-angle-right pull-right"></i>
+
           </a>
-		  </li>
-		  <li class="treeview">
-          <a href="price_list">
-            <i class="fa fa-share"></i> <span>Price List</span>
-            <i class="fa fa-angle-left pull-right"></i>
+          <ul class="treeview-menu">
+            <li><a href="viewItineraries.php"><i class="fa fa-circle-o"></i> List</a></li>
+            <li><a href="addItineraries.php"><i class="fa fa-circle-o"></i> Add itineraries</a></li>
+          </ul>
+        </li>
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share"></i>
+            <span>Price List</span>
+            <i class="fa fa-angle-right pull-right"></i>
+
           </a>
-		  </li>
-		  <li class="treeview">
-          <a href="customers">
+          <ul class="treeview-menu">
+            <li><a href="priceList.php"><i class="fa fa-circle-o"></i>  List</a></li>
+            <li><a href="addPriceList.php"><i class="fa fa-circle-o"></i> Add Price List</a></li>
+          </ul>
+        </li>
+      <li class="treeview">
+          <a href="viewContacts.php">
             <i class="fa fa-share"></i> <span>Contacts</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
-		  </li>
-		  <li class="treeview">
-          <a href="view_sites">
-            <i class="fa fa-share"></i> <span>Sites</span>
-            <i class="fa fa-angle-left pull-right"></i>
+      </li>
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share"></i>
+            <span>Sites</span>
+            <i class="fa fa-angle-right pull-right"></i>
+
           </a>
-		  </li>
-		</ul>
+          <ul class="treeview-menu">
+            <li><a href="viewSites.php"><i class="fa fa-circle-o"></i> List</a></li>
+            <li><a href="addSites.php"><i class="fa fa-circle-o"></i> Add Site</a></li>
+          </ul>
+        </li>
+    </ul>
     </section>
     <!-- /.sidebar -->
   </aside>

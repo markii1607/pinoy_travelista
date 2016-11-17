@@ -11,7 +11,7 @@
           <div class="box box-primary">
             <div class="box-header with-border">
 
-  <div  style="margin-left:0px;margin-right:" class="col-lg-10">     
+  <div  style="margin-left:0px;margin-right:" class="col-lg-10">
 
         </div>
       <!-- /.panel-heading -->
