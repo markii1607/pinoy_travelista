@@ -88,19 +88,20 @@
 
 							
 						<tr>
-					<td colspan="2" style="height:25px;font-size:12px;width:auto">Name:</td>
+					<td colspan="2" style="height:25px;font-size:12px;width:auto">Price Description:</td>
 					<td colspan="2"> 
 					<div class="bootstrap-timepicker">
 				     <div class="input-group">
 					 <div class="input-group-addon">
                       <i class="fa fa-user"></i>
 					  </div>
-                    <input type="text" name= "name" class="form-control" style="width:300px;"  placeholder="Price" required>
+                    <input type="text" name= "name" class="form-control" style="width:300px;"  placeholder="<price> per <person>" required>
 					
                  
                     </div>
                     
                   </div>
+                    {{ $errors->first('name', '<font color="red">* :message</font>')}}
 				  </td>	
 				  <td colspan="2" style="height:25px;font-size:12px;width:auto">Tour Packages:</td>
 				  	<td colspan="2"> 
@@ -109,35 +110,27 @@
 					 <div class="input-group-addon">
                       <i class="fa fa-list"></i>
 					  </div>
-					 <select name="price"  class="form-control"  style="width:300px;" >
-								<option value="">--SELECT--</option>
+					 <select name="tour_package_id"  class="form-control"  style="width:300px;" required>
+								<option value="" selected="">--SELECT--</option>
 
-                                  
-                                    <?php 
-                                    $qry_id =mysql_query("SELECT * FROM tour_packages");
-                                    while($id=mysql_fetch_assoc($qry_id)){
-                                    
                                      ?>
-                                    
-                                    <option value="<?php echo $id['id']; ?>"><?php echo $id['name']; ?></option>
-
-                                                                                                                
-                                    <?php 
-                                    
-                                    }
-                                    ?>
-                                   
+                                    @foreach($packs as $pack)
+                                    <option value="{{$pack->id}}">{{$pack->name}}</option>
+                                    @endforeach
                                     </select>
 									 
                     </div>
                     
                   </div>
+                    {{ $errors->first('tour_package_id', '<font color="red">* :message</font>')}}
 				  </td>	
 				 
 </table>
 </div>
 	
-				<button type="submit" name ="post" class="btn btn-block btn-lg btn-primary"><i class="fa fa-save"></i>&nbsp; POST</button>
+         
+         <input type="submit" value="POST" class="btn btn-block btn-lg btn-primary" />
+				
 						
           </div>
         

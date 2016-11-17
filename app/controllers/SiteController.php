@@ -17,7 +17,8 @@ class SiteController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('admin.addSites');
+		$packs = TourPackage::all();
+		return View::make('admin.addSites')->withPacks($packs);
 	}
 
 
@@ -66,6 +67,7 @@ class SiteController extends \BaseController {
     $store->save();
 
     if ($store) {
+    	Session::flash('message', 'Successfully Added Site');
       return Redirect::back();
     }
 

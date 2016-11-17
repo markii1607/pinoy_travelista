@@ -53,7 +53,12 @@
 </script>
 	
 	  <div class="content-wrapper">
-<form action="addSites.php"  method="post" enctype="multipart/form-data" >
+    @if (Session::get('message'))
+    <div class="alert alert-info">
+      <font color="white">{{ Session::get('message') }}</font>
+    </div>
+    @endif
+    {{ Form::open(['route' => 'sites.store', 'files' => true]) }}
    <section class="content">
       <div class="row">
         <!-- left column -->
@@ -84,9 +89,24 @@
 
 							<tr>
 							 <td colspan="2" style="height:25px;font-size:12px;width:auto">Filename:</td>
-					<td rowspan=""><div id=""><center><img src="dpic/default.png"  /><center><br />
-							<td><input  type="file" name="file" id="file"/></div></td>
+					<td rowspan=""><div id=""><br />
+							<td>{{Form::file('file')}}</div></td>
 							</td>
+
+              <td colspan="2" style="height:25px;font-size:12px;width:auto">Folder:</td>
+          <td colspan="2"> 
+          <div class="bootstrap-timepicker">
+             <div class="input-group">
+           <div class="input-group-addon">
+                      <i class="fa fa-user"></i>
+            </div>
+                    <input type="text" name= "folder" class="form-control" style="width:300px;"  placeholder="Folder Name">
+          
+                 
+                    </div>
+                    
+                  </div>
+          </td>
 
 							</tr>
 						<tr>
@@ -111,24 +131,11 @@
 					 <div class="input-group-addon">
                       <i class="fa fa-list"></i>
 					  </div>
-					 <select name="package"  class="form-control"  style="width:300px;" >
-								<option value="">--SELECT--</option>
-
-                                  
-                                    <?php 
-                                    $qry_id =mysql_query("SELECT * FROM tour_packages");
-                                    while($id=mysql_fetch_assoc($qry_id)){
-                                    
-                                     ?>
-                                    
-                                    <option value="<?php echo $id['id']; ?>"><?php echo $id['name']; ?></option>
-
-                                                                                                                
-                                    <?php 
-                                    
-                                    }
-                                    ?>
-                                   
+					 <select name="tour_package_id"  class="form-control"  style="width:300px;" >
+								<option value="" selected>--SELECT--</option>
+                                    @foreach($packs as $pack)
+                                    <option value="{{$pack->id}}">{{$pack->name}}</option>
+                                   @endforeach
                                     </select>
 									 
                     </div>
@@ -164,7 +171,7 @@
   
   
               </div>
-            </form>
+            {{Form::close()}}
           </div>           
                     </br>  
 					

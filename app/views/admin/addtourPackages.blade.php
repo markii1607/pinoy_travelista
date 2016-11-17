@@ -53,7 +53,12 @@
 </script>
 	
 	  <div class="content-wrapper">
-<form action="addtourPackages.php"  method="post" enctype="multipart/form-data" >
+    @if (Session::get('message'))
+    <div class="alert alert-info">
+      <font color="white">{{ Session::get('message') }}</font>
+    </div>
+    @endif
+    {{Form::open(['route' => 'tours.store', 'files' => true])}}
    <section class="content">
       <div class="row">
         <!-- left column -->
@@ -100,8 +105,8 @@
 				  </td>	
 				  
 				  <td colspan="2" style="height:25px;font-size:12px;width:auto">Filename:</td>
-					<td rowspan=""><div id=""><center><img src="dpic/default.png"  /><center><br />
-							<td><input  type="file" name="file" id="file"/></div></td>
+					<td rowspan=""><div id=""><br />
+							<td>{{Form::file('file', ['required' => 'required'])}}</div></td>
 							</td>
 
 					
@@ -150,7 +155,7 @@
 					 <div class="input-group-addon">
                       <i class="fa fa-users"></i>
 					  </div>
-                    <input type="text" name="package_in" placeholder="Package Inclusion" style="width:297px;" class="form-control" required>
+                    <input type="text" name="package_inclusion" placeholder="Package Inclusion" style="width:297px;" class="form-control" required>
 					
                  
                     </div>
@@ -164,7 +169,7 @@
 					 <div class="input-group-addon">
                       <i class="fa fa-users"></i>
 					  </div>
-                    <input type="text" name="package_ex" placeholder="Package exclusion" style="width:297px;" class="form-control" required>
+                    <input type="text" name="package_exclusion" placeholder="Package exclusion" style="width:297px;" class="form-control" required>
 					
                  
                     </div>
@@ -194,7 +199,7 @@
 					 <div class="input-group-addon">
                       <i class="fa fa-users"></i>
 					  </div>
-                    <input type="text" name="days" placeholder="Ex. 1" style="width:297px;" class="form-control" required>
+                    <input type="text" name="no_of_days" placeholder="Ex. 1" style="width:297px;" class="form-control" required>
 					
                  
                     </div>
@@ -207,7 +212,22 @@
 						 
 						 <tr>
 							<td colspan="2" style="height:25px;font-size:12px;width:auto">Package Description:</td>
-							<td colspan="2" ><textarea class="form-control" name="package_desc" rows="3" placeholder="Package Description..." style="width:340px;"></textarea></td>
+							<td colspan="2" ><textarea class="form-control" name="package_desc" rows="3" placeholder="Package Description..." style="width:340px;" required></textarea></td>
+
+
+              <td colspan="2" style="height:25px;font-size:12px;width:auto">Folder:</td>
+        <td colspan="2"><div class="bootstrap-timepicker">
+             <div class="input-group">
+           <div class="input-group-addon">
+                      <i class="fa fa-users"></i>
+            </div>
+                    <input type="text" name="folder" placeholder="Folder Name" style="width:297px;" class="form-control" required>
+          
+                 
+                    </div>
+                    
+                  </div>
+          </td>
 
 						 </tr>
 						  
@@ -242,7 +262,7 @@
   
   
               </div>
-            </form>
+    {{Form::close()}}
           </div>           
                     </br>  
 					

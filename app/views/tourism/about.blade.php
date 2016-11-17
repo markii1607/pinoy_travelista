@@ -26,6 +26,7 @@
 									<img src="images/mark_pic.jpg" height="500" width="500" alt="" />
 									<div class="team-grid-info">
 										<h4>MARK JERLY BUNDALIAN</h4>
+										<p>BSIT - Bicol University - Backend Programmer</p>
 										<p>
 										</p>
 									</div>
@@ -34,6 +35,7 @@
 									<img src="images/avatar2.png" height="500" width="500" alt="" />
 									<div class="team-grid-info">
 										<h4>JANELLE LAGATUZ</h4>
+										<p>BSIT - Bicol University - Content Manager/SEO Specialist</p>
 										<p>
 										</p>
 									</div>
@@ -41,7 +43,8 @@
 								<div class="team-grid">
 									<img src="images/balbs_pic.jpg" height="500" width="500" alt="" />
 									<div class="team-grid-info">
-										<h4>JA BALBIN</h4>
+										<h4>John Anthony BALBIN</h4>
+										<p>BSIT - Bicol University - Web Designer & Frontend Designer</p>
 										<p>
 										</p>
 									</div>

@@ -70,6 +70,7 @@ class TourPackageController extends \BaseController {
     $store->save();
 
     if ($store) {
+    	Session::flash('message', 'Successfully added Tour Package');
       return Redirect::back();
     }
 

@@ -17,7 +17,8 @@ class PriceListController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('admin.addPriceList');
+		$packs = TourPackage::all();
+		return View::make('admin.addPriceList')->withPacks($packs);
 	}
 	
 
@@ -37,6 +38,7 @@ class PriceListController extends \BaseController {
     $store = $this->model->create($data);
 
     if ($store) {
+    	Session::flash('message', 'Successfully added Price List');
       return Redirect::back();
     }
 
