@@ -45,8 +45,8 @@
 							<td>{{$contact->message}}</td>
 							<td>{{$contact->created_at}}</td>
 							
-							<td class="pull-"><div><button type="button" href = "#" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-							<i class="fa fa-wrench"></i></i>&nbsp;Edit details</button>
+							<td class="pull-"><div><button type="button" href = "#" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+							<i class="fa fa-trash"></i></i>&nbsp;Delete</button>
         </tr>
         @endforeach
 

@@ -115,7 +115,7 @@
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="../index.php" class="logo">
+    <a href="view_feeds" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>P</b>T</span>
       <!-- logo for regular state and mobile devices -->
@@ -136,12 +136,12 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <span class="hidden-xs">Admin</span>
+              <span class="hidden-xs">Welcome, {{ Auth::user()->fname }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../images/logo2.png" class="img-circle" alt="User Image">
+                {{ HTML::image('images/logo2.png', 'User Image', ['class' => 'img-circle']) }}
 
                 <p>
                   Administrator
@@ -153,10 +153,10 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="accounts.php" class="btn btn-default btn-flat">Profile</a>
+                  <a href="{{ URL::to('admin/pages/accounts') }}" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="{{ URL::to('logout') }}" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -177,7 +177,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../images/logo2.png" class="img-circle" alt="User Image">
+          {{ HTML::image('images/logo2.png', 'User Image', ['class' => 'img-circle']) }}
         </div>
         <div class="pull-left info">
           <p>Admin</p>
@@ -190,7 +190,7 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
            <li class="treeview">
-          <a href="viewFeedback.php">
+          <a href="{{ URL::to('admin/pages/view_feeds') }}">
             <i class="fa fa-bullhorn"></i>
             <span>Feedbacks</span>
             <i class="fa fa-angle-right pull-right"></i>
@@ -199,7 +199,7 @@
           
         </li>
       <li class="treeview">
-          <a href="tourReview.php">
+          <a href="{{ URL::to('admin/pages/tour_reviews') }}">
             <i class="fa fa-share"></i> <span>Tour Reviews</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
@@ -212,8 +212,8 @@
 
           </a>
           <ul class="treeview-menu">
-            <li><a href="tourPackages.php"><i class="fa fa-circle-o"></i> List</a></li>
-            <li><a href="addtourPackages.php"><i class="fa fa-circle-o"></i> Add Package</a></li>
+            <li><a href="{{ URL::to('admin/pages/tour_packages') }}"><i class="fa fa-circle-o"></i> List</a></li>
+            <li><a href="{{ URL::route('tours.create') }}"><i class="fa fa-circle-o"></i> Add Package</a></li>
           </ul>
         </li>
       <li class="treeview">
@@ -224,8 +224,8 @@
 
           </a>
           <ul class="treeview-menu">
-            <li><a href="viewItineraries.php"><i class="fa fa-circle-o"></i> List</a></li>
-            <li><a href="addItineraries.php"><i class="fa fa-circle-o"></i> Add itineraries</a></li>
+            <li><a href="{{ URL::to('admin/pages/view_itineraries') }}"><i class="fa fa-circle-o"></i> List</a></li>
+          <li><a href="{{ URL::route('itinerary.create') }}"><i class="fa fa-circle-o"></i> Add itineraries</a></li>
           </ul>
         </li>
       <li class="treeview">
@@ -236,12 +236,12 @@
 
           </a>
           <ul class="treeview-menu">
-            <li><a href="priceList.php"><i class="fa fa-circle-o"></i>  List</a></li>
-            <li><a href="addPriceList.php"><i class="fa fa-circle-o"></i> Add Price List</a></li>
+            <li><a href="{{ URL::to('admin/pages/price_list') }}"><i class="fa fa-circle-o"></i>  List</a></li>
+            <li><a href="{{ URL::route('prices.create') }}"><i class="fa fa-circle-o"></i> Add Price List</a></li>
           </ul>
         </li>
       <li class="treeview">
-          <a href="viewContacts.php">
+          <a href="{{ URL::to('admin/pages/customers') }}">
             <i class="fa fa-share"></i> <span>Contacts</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
@@ -254,8 +254,8 @@
 
           </a>
           <ul class="treeview-menu">
-            <li><a href="viewSites.php"><i class="fa fa-circle-o"></i> List</a></li>
-            <li><a href="addSites.php"><i class="fa fa-circle-o"></i> Add Site</a></li>
+            <li><a href="{{ URL::to('admin/pages/view_sites') }}"><i class="fa fa-circle-o"></i> List</a></li>
+            <li><a href="{{ URL::route('sites.create') }}"><i class="fa fa-circle-o"></i> Add Site</a></li>
           </ul>
         </li>
     </ul>

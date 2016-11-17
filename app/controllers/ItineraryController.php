@@ -17,7 +17,8 @@ class ItineraryController extends \BaseController {
 	 */
 	public function create()
 	{
-		
+		$packs = TourPackage::all();
+		return View::make('admin.addItineraries')->withPacks($packs);
 	}
 
 	
@@ -37,6 +38,7 @@ class ItineraryController extends \BaseController {
     $store = $this->model->create($data);
 
     if ($store) {
+    	Session::flash('message', "Successfully added Itinerary");
       return Redirect::back();
     }
 
@@ -51,7 +53,7 @@ class ItineraryController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		return View::make('admin.editItineraries');
 	}
 
 

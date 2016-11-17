@@ -17,7 +17,7 @@ class PriceListController extends \BaseController {
 	 */
 	public function create()
 	{
-		
+		return View::make('admin.addPriceList');
 	}
 	
 
@@ -51,7 +51,7 @@ class PriceListController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		return View::make('admin.editPrice');
 	}
 
 

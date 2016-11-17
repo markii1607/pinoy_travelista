@@ -21,6 +21,7 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   {{  HTML::style('admin/dist/css/skins/_all-skins.min.css') }}
+  {{  HTML::style('plugins/timepicker/bootstrap-timepicker.min.css') }}
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,6 +48,19 @@
   {{  HTML::script('dist/js/app.min.js') }}
 <!-- AdminLTE for demo purposes -->
   {{  HTML::script('dist/js/demo.js') }}
+
+
+    <!-- jQuery -->
+    <script src="admin/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="admin/js/bootstrap.min.js"></script>
+
+  <!-- bootstrap time picker -->
+  <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
+  <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
+
+
 <!-- page script -->
 <script>
   $(function () {

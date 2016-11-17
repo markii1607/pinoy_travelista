@@ -29,10 +29,6 @@ Route::get('about', function(){
   return View::make('tourism.about');
 });
 
-Route::get('asd', function(){
-  return View::make('admin-master2');
-});
-
 // individual page routes (Controllers)
 Route::get('top', 'TourPackageController@getTours');
 
@@ -57,48 +53,10 @@ Route::get('admin/pages/view_sites', ['before' => 'auth.basic', 'uses' => 'SiteC
 
 Route::get('admin/pages/price_list', ['before' => 'auth.basic', 'uses' => 'PriceListController@admin_index']);
 
+Route::get('admin/pages/accounts', ['before' => 'auth.basic', 'uses' => 'UserController@admin_index']);
+
 // logout routes
-Route::get('admin/pages/logout', function() {
-  Auth::logout();
-  return Redirect::to('/'); 
-});
-
-Route::get('tours/{id}/logout', function() {
-  Auth::logout();
-  return Redirect::to('/'); 
-});
-
-Route::get('tours/logout', function() {
-  Auth::logout();
-  return Redirect::to('/'); 
-});
-
-Route::get('itinerary/{id}/logout', function() {
-  Auth::logout();
-  return Redirect::to('/'); 
-});
-
-Route::get('itinerary/logout', function() {
-  Auth::logout();
-  return Redirect::to('/'); 
-});
-
-Route::get('prices/{id}/logout', function() {
-  Auth::logout();
-  return Redirect::to('/'); 
-});
-
-Route::get('prices/logout', function() {
-  Auth::logout();
-  return Redirect::to('/'); 
-});
-
-Route::get('sites/{id}/logout', function() {
-  Auth::logout();
-  return Redirect::to('/'); 
-});
-
-Route::get('sites/logout', function() {
+Route::get('logout', function() {
   Auth::logout();
   return Redirect::to('/'); 
 });

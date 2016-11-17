@@ -37,45 +37,18 @@
 			
 			</thead>
 			<tbody>
-			
-			
-<?php
-
-
-
-  $sql="SELECT * from users where priv_level='1' ";
-
-	
-						$query = mysql_query($sql) or die (mysql_error());
-						while($row = mysql_fetch_assoc($query)){
-
-						if($query){
-					
-						mysql_query("COMMIT");
-						mysql_query("UNLOCK TABLES");
-							echo "<tr>";
-							?> 
-							
-							<td><?php echo $row['fname'].' '. $row['lname'];?></td>
-							<td><?php echo $row['username'];?></td>
-							<td><?php echo $row['email'];?></td>
-							<td><?php echo $row['gender'];?>.</td>
+            @foreach($users as $user)
+            <tr>
+              <td align="center">{{$user->lname.", ".$user->fname." ".$user->mname}}</td>
+              <td align="center">{{$user->username}}</td>
+              <td align="center">{{$user->email}}</td>
+              <td align="center">{{$user->gender}}</td>
 							
 							
-							<td align="center"> <a align="center" class="btn btn-success" href="viewAccount.php?id=<?php echo $row['id']; ?>" data-gravity=n title="More details"><i class="fa fa-plus"></i>&nbsp;More details</a>										
-
-							<?php
-													
-														}else{
-											mysql_query("ROLLBACK");
-											mysql_query("UNLOCK TABLES");
-											}
-										}
-  
-										
-					
-					
-?>
+							<td align="center"> <a align="center" class="btn btn-success" href="{{ URL::to('users/'.$user->id.'') }}" data-gravity=n title="More details"><i class="fa fa-plus"></i>&nbsp;More details</a>
+              </td>
+            </tr>
+            @endforeach
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -89,36 +62,5 @@
 	  </div>
 		</div>
 			</div>
-	
-</body>
-<!-- jQuery 2.2.0 -->
-<script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<!-- DataTables -->
-<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="../plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="../dist/js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../dist/js/demo.js"></script>
-<!-- page script -->
-<script>
-  $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true
-    });
-  });
-</script>
 
-</html>
+@stop

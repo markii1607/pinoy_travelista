@@ -50,7 +50,8 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$user = $this->model->find($id);
+		return View::make('admin.viewAccount')->withUser($user);
 	}
 
 
@@ -87,6 +88,11 @@ class UserController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function admin_index() {
+		$users = $this->model->all();
+		return View::make("admin.accounts")->withUsers($users);
 	}
 
 

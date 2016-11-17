@@ -17,7 +17,7 @@ class SiteController extends \BaseController {
 	 */
 	public function create()
 	{
-		
+		return View::make('admin.addSites');
 	}
 
 
@@ -81,7 +81,7 @@ class SiteController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		return View::make('admin.editSites');
 	}
 
 

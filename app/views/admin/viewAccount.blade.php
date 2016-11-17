@@ -1,26 +1,6 @@
- <?php
-		include "includes/header.php";
-		include('../db/db.php');
-?>
-  
- <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Icons</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-  <!-- demo style -->
+@extends('../admin-master')
+
+@section('content')
     <style>
     /* FROM HTTP://WWW.GETBOOTSTRAP.COM
      * Glyphicons
@@ -95,17 +75,6 @@
 							
 							
 	
-
-            <?php
-				if(isset($_GET['id'])){
-				$id=$_GET['id'];
-				$find=mysql_query("SELECT * FROM users WHERE id='$id'");
-				while($found=mysql_fetch_assoc($find)){
-					
-					
-			
-			
-			?>
 			
 			<br>
 			 <div  style="margin-left:85px;margin-right:" class="col-lg-10"> 
@@ -122,7 +91,7 @@
 				<tr>
 					
 			
-									 <td><font size = "3"><strong>Name: <td> <?php echo $found['fname'].' '.$found['mname'].' '.$found['lname']; ?> </td> 
+									 <td><font size = "3"><strong>Name: <td> {{$user->lname.", ".$user->fname." ".$user->mname}} </td> 
 									
                     </td>
 						
@@ -133,8 +102,7 @@
 					
                     <tr>
 					
-									 <td><font size = "3"><strong>Username: <td> <?php echo $found['username']; ?> </td> 
-									 <td><font size = "3"><strong>Password: <td> <?php echo $found['password']; ?> </td> 
+									 <td><font size = "3"><strong>Username: <td> {{$user->username }}</td> 
 						
 
 						
@@ -149,14 +117,13 @@
 					<td align="center"><hr></td>	
 					
 					 <tr>
-						<td><font size = "3"><strong>E-mail: <td> <?php echo $found['email']; ?> </td> 
-						<td><font size = "3"><strong>Gender: <td> <?php echo $found['gender']; ?> </td> 
+						<td><font size = "3"><strong>E-mail: <td> {{$user->email}} </td> 
+						<td><font size = "3"><strong>Gender: <td> {{$user->gender}} </td> 
 						
 						</tr>
 						
 						
 					
-				<?php } }?>
 
 
 					
@@ -169,7 +136,7 @@
 				<!-- Button trigger modal -->
  <td width="336" align="center">
  
- <button type="button" href = "editMap.php?map_id=<?php echo $map_id; ?>" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+ <button type="button" href = "#" class="btn btn-success" data-toggle="modal" data-target="#myModal">
   <i class="fa fa-wrench"></i></i>&nbsp;Edit Details
 </button>
 					
@@ -207,5 +174,5 @@
   </div>
   <!-- /.content-wrapper --> 
   
-  <?php include "includes/footer.php"; ?>
+@stop
 

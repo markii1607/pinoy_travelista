@@ -37,6 +37,7 @@ class FeedbackController extends \BaseController {
     $store = $this->model->create($data);
 
     if ($store) {
+      Session::flash('message', 'Successfully added Price List');
       return Redirect::back();
     }
 
