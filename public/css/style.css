@@ -543,12 +543,37 @@ ul.dropdown-menu {
     line-height: 1.8em;
     margin: 2em 0 1em 0;
 }
-.welcome-left p{
+.welcome-leftz p{
     color: #BBBBBB;
     font-size: .875em;
     line-height: 1.8em;
     margin: 0;
 }
+
+.welcome-leftz {
+    margin: 0 2em 2em 0;
+}
+.welcome-leftz h3,.services-info h3{
+    color: #EE732F;
+    font-size: 4em;
+    font-weight: 100;
+    font-family: 'Cinzel Decorative', cursive;
+    margin: 0;
+}
+.welcome-leftz h4{
+    color: #313131;
+    font-size: .875em;
+    font-weight: 600;
+    line-height: 1.8em;
+    margin: 2em 0 1em 0;
+}
+.welcome-leftz p{
+    color: #BBBBBB;
+    font-size: .875em;
+    line-height: 1.8em;
+    margin: 0;
+}
+
 .welcome-right{
 	position:relative;
 }
