@@ -214,7 +214,7 @@ function myFunction() {
 										<h3>COME AND EXPLORE THE AMAZING BEAUTY OF THE PHILIPPINES</h3>
 										<p></p>
 										<div class="more-button">
-											<!-- <a href="top">Click Here	</a> -->
+											<a href="top">Click Here For More Info</a>
 										</div>
 									</div>
 								</li>
