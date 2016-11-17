@@ -25,15 +25,17 @@
 					</p>
 				</div>
 				<div class="col-md-6 contact-form wow fadeInRight animated animated" data-wow-delay=".5s">
-					<form>
-					
-						<input type="text" class="form-control" name="nam" placeholder="Name" required="">
-						<input type="text" class="form-control" placeholder="Email" required="">
-						<input type="text" class="form-control" placeholder="Subject" required="">
-						<textarea class="form-control" placeholder="Message" required=""></textarea>
+					{{ Form::open(['route' => 'contacts.store']) }}
+					{{ Form::text('name', '', array('class' => 'form-control', 'placeholder' => 'Name')) }}
+					{{ $errors->first('name', '<font color="red">* :message</font>')}}
+					{{ Form::text('email', '', array('class' => 'form-control', 'placeholder' => 'Email')) }}
+					{{ $errors->first('email', '<font color="red">* :message</font>')}}
+					{{ Form::text('subject', '', array('class' => 'form-control', 'placeholder' => 'Subject')) }}
+					{{ Form::textarea('message', '', array('class' => 'form-control', 'placeholder' => 'Message')) }}
+					{{ $errors->first('message', '<font color="red">* :message</font>')}}
 						<br>
-						<button class="btn btn-success form-control" type="submit">SEND</button>
-					</form>
+					{{ Form::button('SEND', ['class' => 'btn btn-success form-control', 'type' => 'submit']) }}
+					{{ Form::close() }}
 				</div>
 				<div class="clearfix"> </div>
 			</div>

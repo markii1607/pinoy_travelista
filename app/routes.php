@@ -16,24 +16,26 @@ Route::get('/', 'TourPackageController@getPackages');
 
 // resourceful routes
 Route::resource('contacts', 'ContactController');
-Route::resource('feedback', 'FeedbackController');
+Route::resource('testimonials', 'FeedbackController');
 Route::resource('tours', 'TourPackageController');
 Route::resource('itinerary', 'ItineraryController');
 Route::resource('prices', 'PriceListController');
 Route::resource('sites', 'SiteController');
 Route::resource('reviews', 'TourReviewController');
+Route::resource('users', 'UserController');
 
+// individual page routes (Closures)
 Route::get('about', function(){
   return View::make('tourism.about');
 });
 
-Route::get('testimonials', function() {
-  return View::make('tourism.testimonials');
+Route::get('asd', function(){
+  return View::make('admin-master2');
 });
 
+// individual page routes (Controllers)
 Route::get('top', 'TourPackageController@getTours');
 
-// Route::get('details/{id}', 'TourPackageController@show');
 Route::get('details', 'TourPackageController@details');
 
 // admin Routes
@@ -55,7 +57,48 @@ Route::get('admin/pages/view_sites', ['before' => 'auth.basic', 'uses' => 'SiteC
 
 Route::get('admin/pages/price_list', ['before' => 'auth.basic', 'uses' => 'PriceListController@admin_index']);
 
+// logout routes
 Route::get('admin/pages/logout', function() {
+  Auth::logout();
+  return Redirect::to('/'); 
+});
+
+Route::get('tours/{id}/logout', function() {
+  Auth::logout();
+  return Redirect::to('/'); 
+});
+
+Route::get('tours/logout', function() {
+  Auth::logout();
+  return Redirect::to('/'); 
+});
+
+Route::get('itinerary/{id}/logout', function() {
+  Auth::logout();
+  return Redirect::to('/'); 
+});
+
+Route::get('itinerary/logout', function() {
+  Auth::logout();
+  return Redirect::to('/'); 
+});
+
+Route::get('prices/{id}/logout', function() {
+  Auth::logout();
+  return Redirect::to('/'); 
+});
+
+Route::get('prices/logout', function() {
+  Auth::logout();
+  return Redirect::to('/'); 
+});
+
+Route::get('sites/{id}/logout', function() {
+  Auth::logout();
+  return Redirect::to('/'); 
+});
+
+Route::get('sites/logout', function() {
   Auth::logout();
   return Redirect::to('/'); 
 });

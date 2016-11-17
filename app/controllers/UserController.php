@@ -1,5 +1,6 @@
 <?php
 
+// Resourceful Controller for the User Model
 class UserController extends \BaseController {
 
 	protected $model;

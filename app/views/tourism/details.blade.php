@@ -70,11 +70,13 @@
 					<br />
 				</div>
 					<div class="tab-pane" id="2b">
-							@foreach(range(3,1) as $i)
-								<?php 
-									$url = "images/".$package->filename."/".$package->filename."".$i.".jpg";
-								?>
-								<img src="{{$url}}" height="300" width="500" />
+							@foreach($package->sites as $site)
+								@if ($site->folder && $site->filename)
+									<?php 
+										$url = "images/".$site->folder."/".$site->filename;
+									?>
+									<img src="{{$url}}" height="300" width="500" />
+								@endif
 							@endforeach
 					</div>
 					</div>
@@ -89,46 +91,15 @@
 				
 			 <!-- //requried-jsfiles-for owl -->
 		     <div id="owl-demo1" class="owl-carousel">
+		     @foreach($reviews as $review)
 				  <div class="item">
 					  <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>Mark Jerly Bundalian</h4>
+							<p>{{ HTML::image('images/dots1.png') }}{{ $review->review }}{{ HTML::image('images/dots2.png') }}</p>
+							<h4>{{ $review->name }}</h4>
 						    <h6><span></span></h6>
 					  </div> 
 				  </div>
-				   <div class="item">
-					  <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>John Anthony L. Balbin</h4>
-						    <h6><span></span></h6>
-					  </div> 
-				  </div>
-				   <div class="item">
-					   <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>Janelle Lagatuz</h4>
-						    <h6><span></span></h6>
-					   </div> 
-				  </div>
-				  <div class="item">
-					  <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-						    <h4>Katrina Britanico</h4>
-						    <h6><span></span></h6>
-					  </div> 
-				  </div>
-				  <div class="item">
-					   <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>Harvey Javier</h4>
-						    <h6><span></span></h6>
-					  </div> 
-				  </div>
+				  @endforeach
 				  
 			  </div>
 			  
@@ -153,14 +124,17 @@
 					<h3 align="center">REVIEW</h3>
 					<hr>
 				</div>
-				<form>
-						<input type="text" class="form-control" name="name" placeholder="Name" required="">
-						<input type="text" class="form-control" placeholder="Email" required="">
-						<input type="text" class="form-control" placeholder="Subject" required="">
-						<textarea placeholder="Review"  class="form-control" required=""></textarea>
+					{{ Form::open(['route' => 'reviews.store']) }}
+					{{ Form::hidden('tour_package_id', $id) }}
+					{{ Form::text('name', '', array('class' => 'form-control', 'placeholder' => 'Name')) }}
+					{{ $errors->first('name', '<font color="red">* :message</font>')}}
+					{{ Form::text('email', '', array('class' => 'form-control', 'placeholder' => 'Email')) }}
+					{{ $errors->first('email', '<font color="red">* :message</font>')}}
+					{{ Form::textarea('review', '', array('class' => 'form-control', 'placeholder' => 'How is your experience with the tour package?')) }}
+					{{ $errors->first('review', '<font color="red">* :message</font>')}}
 						<br>
-						<button class="btn btn-success form-control" type="submit">SEND</button>
-					</form>
+					{{ Form::button('SEND', ['class' => 'btn btn-success form-control', 'type' => 'submit']) }}
+					{{ Form::close() }}
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -179,8 +153,9 @@
 						<div class="gallery-grids">
 						@foreach($others as $other)
 							<?php
+								$folder = $other->folder;
 								$name = $other->filename;
-								$url = "images/".$name."/".$name."1.jpg";
+								$url = "images/".$folder."/".$name;
 							?>
 							<div class="col-md-6 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
 								<div class="grid">

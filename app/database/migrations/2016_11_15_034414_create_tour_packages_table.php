@@ -16,6 +16,7 @@ class CreateTourPackagesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
+			$table->string('folder');
 			$table->string('filename');
 			$table->string('location');
 			$table->text('description');

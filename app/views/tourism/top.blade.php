@@ -11,8 +11,9 @@
 				<div class="gallery-grids">
 					@foreach($packages as $package)
 						<?php
+							$folder = $package->folder;
 							$name = $package->filename;
-							$url = "images/".$name."/".$name."1.jpg";
+							$url = "images/".$folder."/".$name;
 						?>
 					<div class="col-md-6 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
 						<div class="grid">
@@ -31,7 +32,6 @@
 
 						</div>
 					</div>
+					</div>
 	<!-- //welcome-bottom -->
-
-	<!-- //services --->
 @stop

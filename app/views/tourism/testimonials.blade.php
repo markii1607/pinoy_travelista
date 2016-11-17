@@ -5,51 +5,20 @@
 	 <div class="client-say-layer">
 	     <div class="client-say-head text-center">
 			  <h3>CLIENT SAY</h3>
-			  <span></span><img src="images/face.png" alt=""><span></span>
+			  <span></span>{{ HTML::image('images/face.png') }}<span></span>
 			  <!-- requried-jsfiles-for owl -->
 				
 			 <!-- //requried-jsfiles-for owl -->
 		     <div id="owl-demo1" class="owl-carousel">
+		     	@foreach($feedbacks as $feedback)
 				  <div class="item">
 					  <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>Mark Jerly Bundalian</h4>
+							<p>{{ HTML::image('images/dots1.png') }}{{ $feedback->feedback }}{{ HTML::image('images/dots2.png') }}</p>
+							<h4>{{ $feedback->name }}</h4>
 						    <h6><span></span></h6>
 					  </div> 
 				  </div>
-				   <div class="item">
-					  <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>John Anthony L. Balbin</h4>
-						    <h6><span></span></h6>
-					  </div> 
-				  </div>
-				   <div class="item">
-					   <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>Janelle Lagatuz</h4>
-						    <h6><span></span></h6>
-					   </div> 
-				  </div>
-				  <div class="item">
-					  <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-						    <h4>Katrina Britanico</h4>
-						    <h6><span></span></h6>
-					  </div> 
-				  </div>
-				  <div class="item">
-					   <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>Harvey Javier</h4>
-						    <h6><span></span></h6>
-					  </div> 
-				  </div>
+				  @endforeach
 				  
 			  </div>
 			  
@@ -74,14 +43,16 @@
 					<h3 align="center">COMMENTS</h3>
 					<hr>
 				</div>
-				<form>
-						<input type="text" class="form-control" name="name" placeholder="Name" required="">
-						<input type="text" class="form-control" placeholder="Email" required="">
-						<input type="text" class="form-control" placeholder="Subject" required="">
-						<textarea placeholder="Message"  class="form-control" required=""></textarea>
+					{{ Form::open(['route' => 'testimonials.store']) }}
+					{{ Form::text('name', '', array('class' => 'form-control', 'placeholder' => 'Name')) }}
+					{{ $errors->first('name', '<font color="red">* :message</font>')}}
+					{{ Form::text('email', '', array('class' => 'form-control', 'placeholder' => 'Email')) }}
+					{{ $errors->first('email', '<font color="red">* :message</font>')}}
+					{{ Form::textarea('feedback', '', array('class' => 'form-control', 'placeholder' => 'How is your experience with us?')) }}
+					{{ $errors->first('feedback', '<font color="red">* :message</font>')}}
 						<br>
-						<button class="btn btn-success form-control" type="submit">SEND</button>
-					</form>
+					{{ Form::button('SEND', ['class' => 'btn btn-success form-control', 'type' => 'submit']) }}
+					{{ Form::close() }}
 				</div>
 				<div class="clearfix"> </div>
 			</div>
