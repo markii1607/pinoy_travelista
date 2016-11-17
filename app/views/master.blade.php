@@ -204,9 +204,8 @@ function myFunction() {
 								<li id="callbacks1_s0" class="callbacks1_on" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out;">
 									<div class="banner-right-info">
 										<h3 class="wow fadeInUp animated animated" data-wow-delay=".5s">20 % DISCOUNT</h3>
-										<p class="wow fadeInUp animated animated" data-wow-delay=".5s">BOOK NOW!</p>
 										<div class="more-button wow fadeInUp animated animated" data-wow-delay=".5s">
-											<!-- <a href="top">Click Here</a> -->
+											<a href="top">AVAIL ONE NOW!</a>
 										</div>
 									</div>
 								</li>
