@@ -4,8 +4,14 @@
 	<!-- welcome-bottom -->
 			<div class="gallery">
 			<div class="container">
-				<div class="gallery-info wow fadeInDown animated animated" data-wow-delay=".5s">
-					<h3>Tour Packages</h3>
+				
+				<div class="gallery-info wow fadeInDown animated" data-wow-delay=".5s">
+					<div class="welcome">
+								<div class="col-md-6 welcome-left">
+
+				<h3 class="wow fadeInLeft animated animated" data-wow-delay=".5s">Tour Packages</h3>
+				</div>
+				</div>
 				</div>
 				
 				<div class="gallery-grids">

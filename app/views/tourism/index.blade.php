@@ -15,15 +15,20 @@
 				</div>
 				
 			</div>
-			<div class="clearfix"> </div>
 		</div>
 	</div>
 	<!-- //welcome -->
 	<!-- welcome-bottom -->
 		<div class="gallery">
 			<div class="container">
+			
 				<div class="gallery-info wow fadeInDown animated" data-wow-delay=".5s">
-					<h2>Our tour packages</h2>
+					<div class="welcome">
+								<div class="col-md-6 welcome-left">
+
+				<h3 class="wow fadeInLeft animated animated" data-wow-delay=".5s">Our tour packages</h3>
+				</div>
+				</div>
 				</div>
 					
 				<div class="gallery-grids">

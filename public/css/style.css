@@ -44,6 +44,8 @@ html, body{
     font-weight: 600;	
 }
 .banner{
+    background: url(../images/1.jpg) no-repeat 0px 0px;
+
     background: url(../images/banner.jpg) no-repeat 0px 0px;
     background-size: cover;
 }
@@ -541,12 +543,37 @@ ul.dropdown-menu {
     line-height: 1.8em;
     margin: 2em 0 1em 0;
 }
-.welcome-left p{
+.welcome-leftz p{
     color: #BBBBBB;
     font-size: .875em;
     line-height: 1.8em;
     margin: 0;
 }
+
+.welcome-leftz {
+    margin: 0 2em 2em 0;
+}
+.welcome-leftz h3,.services-info h3{
+    color: #EE732F;
+    font-size: 4em;
+    font-weight: 100;
+    font-family: 'Cinzel Decorative', cursive;
+    margin: 0;
+}
+.welcome-leftz h4{
+    color: #313131;
+    font-size: .875em;
+    font-weight: 600;
+    line-height: 1.8em;
+    margin: 2em 0 1em 0;
+}
+.welcome-leftz p{
+    color: #BBBBBB;
+    font-size: .875em;
+    line-height: 1.8em;
+    margin: 0;
+}
+
 .welcome-right{
 	position:relative;
 }
@@ -2516,6 +2543,9 @@ body {
   border: 2px solid #ddd;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
@@ -2551,6 +2581,7 @@ body {
 
 
 
+>>>>>>> 35b0e023747c23664653eb9035de1bc89435b0b1
 /*-- about --*/
 .header-bg {
   min-height: 400px !important;
@@ -2957,4 +2988,51 @@ height:1px;
 display: inline-block;
 }
 /*--/client-say--*/
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 54ffdc2d07a2cedbbca16ff4ca06d503e6bee74f
+=======
 >>>>>>> c654749c9d0f1812a9fd1ad184c3de95ccad48ab
+>>>>>>> 35b0e023747c23664653eb9035de1bc89435b0b1

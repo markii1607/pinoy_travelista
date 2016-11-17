@@ -14,6 +14,30 @@
 // route for home page
 Route::get('/', 'TourPackageController@getPackages');
 
+// Resourceful Routing for login
+Route::get('login', 'LoginController@index');
+Route::post('login', 'LoginController@store');
+
+Route::get('logout', 'LoginController@logout');
+
+Route::get('top', function() {
+	return View::make('top');
+});
+
+Route::get('testimonials', function() {
+	return View::make('testimonials');
+});
+Route::get('details', function() {
+	return View::make('tourism.details');
+});
+
+// Redirection when Authenticated
+Route::get('admin', ['before' => 'auth.basic', function(){
+  $user = Auth::user();
+  return "Welcome, ".$user->fname." ".HTML::link('logout', 'Logout');
+}]);
+
+
 // resourceful routes
 Route::resource('contacts', 'ContactController');
 Route::resource('testimonials', 'FeedbackController');

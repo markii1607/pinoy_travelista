@@ -135,13 +135,13 @@ function myFunction() {
             <a href="/">{{ HTML::image('images/logo2.png', '', array('id' => 'section-1', 'class' => 'img-responsive')) }}</a>
             </div>
             <div class="menu">
+			          <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
 		   <li><a href="testimonials"><i class="fa fa-commenting"> Testimonials</a></li></i>
           <li><a href="contacts"><i class="fa fa-phone"> Contact Us</a></li></i>
           <li><a href="about"><i class="fa fa-info-circle">  About</a></li></i>
           <li><a href="top"><i class="fa fa-globe"> Tour Packages</a></li></i>          
             <li><a class="active" href="/"><i class="fa fa-home"> Home</a></li></i>
           
-          <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
           </li>
         </div>
         </div>
