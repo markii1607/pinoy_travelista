@@ -159,7 +159,7 @@ function myFunction() {
 				</div>
 				<div class="banner-right">
 					<div class="banner-top-right-text wow fadeInUp animated animated" data-wow-delay=".5s">
-						<h2>Your travel Buddy</h2>
+						<h2>Craving for Adventure?</h2>
 					</div>
 					<div class="banner-right-top">
 						<script src="js/responsiveslides.min.js"></script>
@@ -203,19 +203,19 @@ function myFunction() {
 							<ul class="rslides callbacks callbacks1" id="slider3">
 								<li id="callbacks1_s0" class="callbacks1_on" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out;">
 									<div class="banner-right-info">
-										<h3 class="wow fadeInUp animated animated" data-wow-delay=".5s">Nulla at magna sit amet nibh posuere malesuada</h3>
-										<p class="wow fadeInUp animated animated" data-wow-delay=".5s">Lorem ipsum dolor sit amet consectetur adipiscing elit duis convallis erat est a euismod justo fringilla ut vestibulum a magna tempus sapien gravida consequat.</p>
+										<h3 class="wow fadeInUp animated animated" data-wow-delay=".5s">20 % DISCOUNT</h3>
+										<p class="wow fadeInUp animated animated" data-wow-delay=".5s">BOOK NOW!</p>
 										<div class="more-button wow fadeInUp animated animated" data-wow-delay=".5s">
-											<a href="top">Click Here</a>
+											<!-- <a href="top">Click Here</a> -->
 										</div>
 									</div>
 								</li>
 								<li id="callbacks1_s1" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
 									<div class="banner-right-info">
-										<h3>Magna mulla at sit amet nibh malesuada posuere</h3>
-										<p>Dolor lorem ipsum sit amet consectetur adipiscing elit duis convallis erat est a euismod justo fringilla ut vestibulum a magna tempus sapien consequat gravida.</p>
+										<h3>COME AND EXPLORE THE AMAZING BEAUTY OF THE PHILIPPINES</h3>
+										<p></p>
 										<div class="more-button">
-											<a href="top">Click Here	</a>
+											<!-- <a href="top">Click Here	</a> -->
 										</div>
 									</div>
 								</li>
