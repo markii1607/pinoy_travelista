@@ -90,23 +90,27 @@
 							<tr>
 							 <td colspan="2" style="height:25px;font-size:12px;width:auto">Filename:</td>
 					<td rowspan=""><div id=""><br />
-							<td>{{Form::file('file')}}</div></td>
+							<td>{{Form::file('file', ['required' => 'required'])}}</div></td>
 							</td>
 
               <td colspan="2" style="height:25px;font-size:12px;width:auto">Folder:</td>
-          <td colspan="2"> 
+            <td colspan="2"> 
           <div class="bootstrap-timepicker">
              <div class="input-group">
            <div class="input-group-addon">
-                      <i class="fa fa-user"></i>
+                      <i class="fa fa-list"></i>
             </div>
-                    <input type="text" name= "folder" class="form-control" style="width:300px;"  placeholder="Folder Name">
-          
-                 
+           <select name="folder"  class="form-control"  style="width:300px;" >
+                <option value="" selected>--SELECT--</option>
+                                    @foreach($packs as $pack)
+                                    <option value="{{$pack->id}}">{{$pack->folder}}</option>
+                                   @endforeach
+                                    </select>
+                   
                     </div>
                     
                   </div>
-          </td>
+          </td> 
 
 							</tr>
 						<tr>

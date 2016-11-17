@@ -212,7 +212,7 @@
 						 
 						 <tr>
 							<td colspan="2" style="height:25px;font-size:12px;width:auto">Package Description:</td>
-							<td colspan="2" ><textarea class="form-control" name="package_desc" rows="3" placeholder="Package Description..." style="width:340px;" required></textarea></td>
+							<td colspan="2" ><textarea class="form-control" name="description" rows="3" placeholder="Package Description..." style="width:340px;" required></textarea></td>
 
 
               <td colspan="2" style="height:25px;font-size:12px;width:auto">Folder:</td>
@@ -237,7 +237,7 @@
 </table>
 </div>
 	
-				<button type="submit" name ="post" class="btn btn-block btn-lg btn-primary"><i class="fa fa-save"></i>&nbsp; POST</button>
+				<button type="submit" class="btn btn-block btn-lg btn-primary"><i class="fa fa-save"></i>&nbsp; POST</button>
 						
           </div>
         

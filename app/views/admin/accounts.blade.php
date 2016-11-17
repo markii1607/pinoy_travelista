@@ -23,7 +23,7 @@
         <div class="tab-content">
 		
           <div class="tab-pane fade in active" id="PI">
- <h1 class="page-header">Tour Reviews</h1>
+ <h1 class="page-header">Accounts</h1>
 
               <table id="example1" class="table table-bordered table-striped">
 			<thead>

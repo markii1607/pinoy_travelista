@@ -40,7 +40,7 @@ class SiteController extends \BaseController {
     // image upload
     if (Input::has('folder')) {
 			if (Input::hasFile('file')) {
-				$folder = $data->folder;
+				$folder = Input::get('folder');
 		    $file = Input::file('file');
 		    $origName = $file->getClientOriginalName();
 		    $type = $file->getMimeType();
@@ -60,9 +60,9 @@ class SiteController extends \BaseController {
 		}
 
     $store = new Site;
-    $store->tour_package_id = $data->tour_package_id;
-    $store->name = $data->name;
-    $store->folder = $data->folder;
+    $store->tour_package_id = Input::get('tour_package_id');
+    $store->name = Input::get('name');
+    $store->folder = Input::get('folder');
     $store->filename = $origName;
     $store->save();
 

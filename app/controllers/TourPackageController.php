@@ -38,7 +38,7 @@ class TourPackageController extends \BaseController {
     // image upload
     if (Input::has('folder')) {
 			if (Input::hasFile('file')) {
-				$folder = $data->folder;
+				$folder = Input::get('folder');
 		    $file = Input::file('file');
 		    $origName = $file->getClientOriginalName();
 		    $type = $file->getMimeType();
@@ -58,15 +58,16 @@ class TourPackageController extends \BaseController {
 		}
 
     $store = new TourPackage;
-    $store->folder = $data->folder;
+    $store->name = Input::get('name');
+    $store->folder = Input::get('folder');
     $store->filename = $origName;
-    $store->location = $data->location;
-    $store->description = $data->description;
-    $store->travel_time = $data->travel_time;
-    $store->package_inclusion = $data->package_inclusion;
-    $store->package_exclusion = $data->package_exclusion;
-    $store->avail = $data->avail;
-    $store->no_of_days = $data->no_of_days;
+    $store->location = Input::get('location');
+    $store->description = Input::get('description');
+    $store->travel_time = Input::get('travel_time');
+    $store->package_inclusion = Input::get('package_inclusion');
+    $store->package_exclusion = Input::get('package_exclusion');
+    $store->avail = Input::get('avail');
+    $store->no_of_days = Input::get('no_of_days');
     $store->save();
 
     if ($store) {

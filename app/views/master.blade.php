@@ -12,6 +12,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{ HTML::style("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css") }}
+<meta name="description" content="Pinoy Travelista is a Bicol Travel Agency founded in 2013 whose head office is in Legazpi City, Albay. We offer packages that will surely maximize the travel experience of our clients at a minimum cost. We want our travelers to have quality service that matches their needs and budget" />
 <meta name="keywords" content="travel agency, pinoy travelista, travelista, tour, adventure" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
@@ -132,7 +133,7 @@ function myFunction() {
       <div class="container">
           <ul class="topnav" id="myTopnav">
           <div class="logo">
-            <a href="/">{{ HTML::image('images/logo2.png', '', array('id' => 'section-1', 'class' => 'img-responsive')) }}</a>
+            <a href="/">{{ HTML::image('images/logo3.png', '', array('id' => 'section-1', 'class' => 'img-responsive')) }}</a>
             </div>
             <div class="menu">
 			          <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
@@ -203,7 +204,7 @@ function myFunction() {
 							<ul class="rslides callbacks callbacks1" id="slider3">
 								<li id="callbacks1_s0" class="callbacks1_on" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out;">
 									<div class="banner-right-info">
-										<h3 class="wow fadeInUp animated animated" data-wow-delay=".5s">20 % DISCOUNT</h3>
+										<h3 class="wow fadeInUp animated animated" data-wow-delay=".5s">AVAIL NOW TO GET 20 % DISCOUNT ON SELECTED PACKAGES</h3>
 										<div class="more-button wow fadeInUp animated animated" data-wow-delay=".5s">
 											<a href="top">AVAIL ONE NOW!</a>
 										</div>

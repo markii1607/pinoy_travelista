@@ -49,8 +49,12 @@
 							<td>{{ $package->no_of_days }}</td>
 							<td>{{ $package->created_at }}</td>
 							
-							<td class="pull-"><div><button type="button" href = "#" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-							<i class="fa fa-wrench"></i></i>&nbsp;Edit details</button>
+
+              <td class="pull-"><div>
+                 {{ Form::open(['method' => 'DELETE', 'route' => ['tours.destroy', $package->id]]) }}
+                 {{ Form::button('<i class="fa fa-trash"></i> Delete', ['class' => 'btn btn-danger', 'type' => 'submit']) }}
+                 {{ Form::close() }}  
+              </div></td>
         </tr>
         @endforeach
           

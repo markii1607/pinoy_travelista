@@ -14,7 +14,7 @@ class TourPackage extends Eloquent {
   protected $fillable = ['name', 'folder', 'filename', 'location', 'description', 'travel_time', 'package_inclusion', 'package_exclusion', 'avail', 'no_of_days'];
 
   // rules for the forms
-  public $rules = ['name' => 'required', 'folder' => 'required', 'filename' => 'required', 'location' => 'required', 'description' => 'required', 'travel_time' => 'required', 'package_inclusion' => 'required', 'package_exclusion' => 'required', 'avail' => 'required', 'no_of_days' => 'required'];
+  public $rules = ['name' => 'required', 'location' => 'required', 'description' => 'required', 'travel_time' => 'required', 'package_inclusion' => 'required', 'package_exclusion' => 'required', 'avail' => 'required', 'no_of_days' => 'required'];
 
   // handler of error messages of validation
   public $errors;

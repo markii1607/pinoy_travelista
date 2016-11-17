@@ -43,8 +43,10 @@
 							<td>{{$feedback->feedback}}</td>
 							<td>{{$feedback->created_at}}</td>
 							
-							<td class="pull-"><div><button type="button" href = "feeds?id={{$feedback->id}}" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-							<i class="fa fa-wrench"></i></i>&nbsp;Edit details</button>			
+							<td class="pull-"><div>
+                 {{ Form::open(['method' => 'DELETE', 'route' => ['testimonials.destroy', $feedback->id]]) }}
+                 {{ Form::button('<i class="fa fa-trash"></i> Delete', ['class' => 'btn btn-danger', 'type' => 'submit']) }}
+                 {{ Form::close() }}	
             </tr>
           @endforeach
 

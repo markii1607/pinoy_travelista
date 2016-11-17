@@ -23,7 +23,7 @@
         <div class="tab-content">
 		
           <div class="tab-pane fade in active" id="PI">
- <h1 class="page-header">Tour Reviews</h1>
+ <h1 class="page-header">Sites</h1>
 
               <table id="example1" class="table table-bordered table-striped">
 			<thead>
@@ -40,9 +40,12 @@
 							<td>{{$site->tour_package->name}}</td>
 							<td>{{$site->name}}</td>
 							<td>{{$site->created_at}}</td>
-							
-							<td class="pull-"><div><button type="button" href = "#" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-							<i class="fa fa-wrench"></i></i>&nbsp;Edit details</button>
+
+              <td class="pull-"><div>
+                 {{ Form::open(['method' => 'DELETE', 'route' => ['sites.destroy', $site->id]]) }}
+                 {{ Form::button('<i class="fa fa-trash"></i> Delete', ['class' => 'btn btn-danger', 'type' => 'submit']) }}
+                 {{ Form::close() }}  
+              </div></td>
             </tr>
           @endforeach
 <!-- Modal -->

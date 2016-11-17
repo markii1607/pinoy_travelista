@@ -23,7 +23,7 @@
         <div class="tab-content">
 		
           <div class="tab-pane fade in active" id="PI">
- <h1 class="page-header">Tour Reviews</h1>
+ <h1 class="page-header">Contacts</h1>
 
               <table id="example1" class="table table-bordered table-striped">
 			<thead>
@@ -37,7 +37,7 @@
 			
 			</thead>
 			<tbody>
-          @foreach($contacts as $contact)
+        @foreach($contacts as $contact)
             <tr>
 							<td>{{$contact->name}}</td>
 							<td>{{$contact->email}}</td>
@@ -45,17 +45,16 @@
 							<td>{{$contact->message}}</td>
 							<td>{{$contact->created_at}}</td>
 							
-							<td class="pull-"><div><button type="button" href = "#" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
-							<i class="fa fa-trash"></i></i>&nbsp;Delete</button>
+							<td class="pull-"><div>
+                 {{ Form::open(['method' => 'DELETE', 'route' => ['contacts.destroy', $contact->id]]) }}
+                 {{ Form::button('<i class="fa fa-trash"></i> Delete', ['class' => 'btn btn-danger', 'type' => 'submit']) }}
+                 {{ Form::close() }}
+
+              </div></td>
         </tr>
         @endforeach
 
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
 
 	</table>
 		</tbody>
