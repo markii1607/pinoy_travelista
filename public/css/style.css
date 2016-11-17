@@ -524,14 +524,34 @@ ul.dropdown-menu {
 }
 /*-- welcome --*/
 .welcome {
-    padding: 6em 0 6em;
+    padding: 2em 0 2em;
 }
 .welcome-left {
-    margin: 2em 0 0 0;
+    margin: 8em 0 0 0;
+}
+.welcome-aleft {
+    margin: 2em 0 0 4em;
+}
+.welcome-aaleft {
+    margin: 2em 0 0 4em;
 }
 .welcome-left h3,.services-info h3{
     color: #EE732F;
     font-size: 4em;
+    font-weight: 100;
+    font-family: 'Cinzel Decorative', cursive;
+    margin: 0;
+}
+.welcome-aleft h2,.services-info h2{
+    color: #EE732F;
+    font-size: 3em;
+    font-weight: 100;
+    font-family: 'Cinzel Decorative', cursive;
+    margin: 0;
+}
+.welcome-aaleft h4,.services-info h4{
+    color: #EE732F;
+    font-size: 3em;
     font-weight: 100;
     font-family: 'Cinzel Decorative', cursive;
     margin: 0;
@@ -575,6 +595,7 @@ ul.dropdown-menu {
 }
 
 .welcome-right{
+	    margin: 10em 0 0 0;
 	position:relative;
 }
 .welcome-right-top img{

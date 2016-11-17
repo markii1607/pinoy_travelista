@@ -18,7 +18,7 @@
 
 			<div class="map wow fadeInUp animated animated" data-wow-delay=".5s">
 			<div class="mail-grids">
-				<div class="col-md-6 mail-grid-left wow fadeInLeft animated animated" data-wow-delay=".5s">
+				<div class="col-md-6 mail-grid-left wow fadeInRight animated animated" data-wow-delay=".5s">
 					<h3>Address</h3>
 					<h5>Cras porttitor imperdiet volutpat nulla malesuada lectus eros <span>ut convallis felis consectetur ut </span></h5>
 					<h4>Headquarters</h4>
@@ -33,7 +33,7 @@
 					</p>
 				</div>
 				
-				<div class="col-md-6 contact-form wow fadeInRight animated animated" data-wow-delay=".5s">
+				<div class="col-md-6 contact-form wow fadeInLeft animated animated" data-wow-delay=".5s">
 					{{ Form::open(['route' => 'contacts.store']) }}
 					{{ Form::text('name', '', array('class' => 'form-control', 'placeholder' => 'Name')) }}
 					{{ $errors->first('name', '<font color="red">* :message</font>')}}

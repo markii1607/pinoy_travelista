@@ -33,14 +33,18 @@
 			
 			<div class="map wow fadeInUp animated animated" data-wow-delay=".5s">
 			<div class="mail-grids">
-				<div class="col-md-6 mail-grid-left wow fadeInLeft animated animated" data-wow-delay=".5s">
-
-						<a href="#"><img src="images/2.png" id="section-1" class="img-responsive" alt=""/></a>
+							<div class="col-md-6 welcome-right">
+				<div class="welcome-right-top wow fadeInUp animated animated" data-wow-delay=".5s">
+					<img src="images/2.png">
 				</div>
+				
+			</div>
 				<div class="col-md-6 contact-form wow fadeInRight animated animated" data-wow-delay=".5s">
 	<div class="col-md-6 mail-grid-left wow fadeInLeft animated animated" data-wow-delay=".5s">
+								<div class="welcome-aaleft" align="center">
 
-					<h3 align="center">COMMENTS</h3>
+					<h3>COMMENTS</h3>
+					</div>
 					<hr>
 				</div>
 					{{ Form::open(['route' => 'testimonials.store']) }}

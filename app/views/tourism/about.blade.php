@@ -23,7 +23,7 @@
 							</div>
 							<div class="team-grids">
 								<div class="team-grid">
-									<img src="images/mark_pic.jpg" height="500" width="500" alt="" />
+									<img src="images/avatar1.png" alt="" />
 									<div class="team-grid-info">
 										<h4>MARK JERLY BUNDALIAN</h4>
 										<p>BSIT - Bicol University - Backend Programmer</p>
@@ -32,7 +32,7 @@
 									</div>
 								</div>
 								<div class="team-grid">
-									<img src="images/avatar2.png" height="500" width="500" alt="" />
+									<img src="images/avatar2.png" alt="" />
 									<div class="team-grid-info">
 										<h4>JANELLE LAGATUZ</h4>
 										<p>BSIT - Bicol University - Content Manager/SEO Specialist</p>
@@ -41,7 +41,7 @@
 									</div>
 								</div>
 								<div class="team-grid">
-									<img src="images/balbs_pic.jpg" height="500" width="500" alt="" />
+									<img src="images/avatar3.png" alt="" />
 									<div class="team-grid-info">
 										<h4>John Anthony BALBIN</h4>
 										<p>BSIT - Bicol University - Web Designer & Frontend Designer</p>
@@ -52,7 +52,6 @@
 								<div class="clearfix"> </div>
 							</div>
 					</div>
-					<!-- //team -->
 				</div>
 				<div class="col-md-3 about-right">
 					<div class="advantage-grids">
