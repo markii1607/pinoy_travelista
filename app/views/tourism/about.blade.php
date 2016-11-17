@@ -29,7 +29,7 @@
 							</div>
 							<div class="team-grids">
 								<div class="team-grid">
-									<img src="images/mark_pic.jpg" height="500" width="500" alt="" />
+									<img src="images/avatar1.png" alt="" />
 									<div class="team-grid-info">
 										<h4>MARK JERLY BUNDALIAN</h4>
 										<p>Class aptent taciti sociosqu ad litora torquent per conu-
@@ -38,7 +38,7 @@
 									</div>
 								</div>
 								<div class="team-grid">
-									<img src="images/avatar2.png" height="500" width="500" alt="" />
+									<img src="images/avatar2.png" alt="" />
 									<div class="team-grid-info">
 										<h4>JANELLE LAGATUZ</h4>
 										<p>Class aptent taciti sociosqu ad litora torquent per conu-
@@ -47,7 +47,7 @@
 									</div>
 								</div>
 								<div class="team-grid">
-									<img src="images/balbs_pic.jpg" height="500" width="500" alt="" />
+									<img src="images/avatar3.png" alt="" />
 									<div class="team-grid-info">
 										<h4>JA BALBIN</h4>
 										<p>Class aptent taciti sociosqu ad litora torquent per conu-
@@ -58,7 +58,6 @@
 								<div class="clearfix"> </div>
 							</div>
 					</div>
-					<!-- //team -->
 				</div>
 				<div class="col-md-3 about-right">
 					<div class="advantage-grids">

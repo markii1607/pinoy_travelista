@@ -3,11 +3,12 @@
 @section('content')
 <br>
 <div class="container">
-	<br>
-	<br>
-	<br>
-<h2>Travel and Tour Package </h2>
+								<div class="welcome-aaleft" align="center">
 
+				<h4>Travel and Tour Package</h4>
+				</div>
+				
+<br>
 </div>
 <div id="exTab3" class="container">	
 <ul  class="nav nav-pills">
